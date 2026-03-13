@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
 
 import { PayloadRedirects } from '@/components/PayloadRedirects'
 import configPromise from '@payload-config'
@@ -67,16 +69,33 @@ export default async function Page({ params: paramsPromise }: Args) {
   const { hero, layout } = page
 
   return (
-    <article className="pt-16 pb-24">
-      <PageClient />
-      {/* Allows redirects for valid pages too */}
-      <PayloadRedirects disableNotFound url={url} />
+    // <article className="pt-16 pb-24">
+    //   <PageClient />
+    //   {/* Allows redirects for valid pages too */}
+    //   <PayloadRedirects disableNotFound url={url} />
 
-      {draft && <LivePreviewListener />}
+    //   {draft && <LivePreviewListener />}
 
-      <RenderHero {...hero} />
-      <RenderBlocks blocks={layout} />
-    </article>
+    //   <RenderHero {...hero} />
+    //   <RenderBlocks blocks={layout} />
+    // </article>
+<div className="relative">
+  <Link href="https://media.istockphoto.com/id/2163867926/photo/hospital-doctor-using-spreadsheet-for-billing-codes-on-desktop.jpg?s=1024x1024&w=is&k=20&c=e5qmQZlbJ-ZoVx9spGErft0Rz5PaN4MZx8r8-6QpxIk=">
+
+    <Image
+      src="https://media.istockphoto.com/id/2163867926/photo/hospital-doctor-using-spreadsheet-for-billing-codes-on-desktop.jpg?s=1024x1024&w=is&k=20&c=e5qmQZlbJ-ZoVx9spGErft0Rz5PaN4MZx8r8-6QpxIk="
+      alt="Care Management Photo"
+      width={500}
+      height={400}
+      className="w-full h-[200px] md:h-[300px] object-cover"
+    />
+
+    <div className="absolute top-2/3 lg:top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-2/3 w-full text-center text-white text-2xl md:text-3xl">
+      Marin Section On Aging
+    </div>
+
+  </Link>
+</div>
   )
 }
 

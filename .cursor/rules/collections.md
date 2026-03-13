@@ -48,7 +48,12 @@ export const Users: CollectionConfig = {
     },
   ],
 }
+
+
+
 ```
+
+
 
 ## Upload Collection
 
@@ -133,8 +138,12 @@ const page = await payload.findByID({
 ```typescript
 import type { CollectionConfig } from 'payload'
 
+
 export const Members: CollectionConfig = {
   slug: 'members',
+  auth: {
+    useAPIKey: true,
+  },
   admin: {
     useAsTitle: 'name'
   },

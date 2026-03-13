@@ -6,6 +6,9 @@ import { slugField } from 'payload'
 
 export const Categories: CollectionConfig = {
   slug: 'categories',
+  auth: {
+    useAPIKey: true,
+  },
   access: {
     create: authenticated,
     delete: authenticated,

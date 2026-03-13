@@ -3,10 +3,11 @@ import type { CollectionConfig } from 'payload'
 import { anyone } from '../../access/anyone'
 import { authenticated } from '../../access/authenticated'
 
+
 export const Members: CollectionConfig = {
   slug: 'members',
   access: {
-      create: authenticated,
+      create: () => true,
       delete: authenticated,
       read: anyone,
       update: authenticated,
