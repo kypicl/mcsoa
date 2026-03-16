@@ -1,6 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
 
 import { PayloadRedirects } from '@/components/PayloadRedirects'
 import configPromise from '@payload-config'
@@ -8,12 +6,10 @@ import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
 import { draftMode } from 'next/headers'
 import React, { cache } from 'react'
 import { homeStatic } from '@/endpoints/seed/home-static'
+import Link from 'next/link'
+import Meetings from './meetings'
 
-import { RenderBlocks } from '@/blocks/RenderBlocks'
-import { RenderHero } from '@/heros/RenderHero'
 import { generateMeta } from '@/utilities/generateMeta'
-import PageClient from './page.client'
-import { LivePreviewListener } from '@/components/LivePreviewListener'
 
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
@@ -45,8 +41,18 @@ type Args = {
   }>
 }
 
+type Media = {
+        id: number
+        url: string
+        alt?: string
+    }
+
 export default async function Page({ params: paramsPromise }: Args) {
-  const { isEnabled: draft } = await draftMode()
+  const bannerRes = await fetch("http://localhost:3000/api/media/1")
+  const banner: Media = await bannerRes.json()
+
+
+
   const { slug = 'home' } = await paramsPromise
   // Decode to support slugs with special characters
   const decodedSlug = decodeURIComponent(slug)
@@ -66,36 +72,38 @@ export default async function Page({ params: paramsPromise }: Args) {
     return <PayloadRedirects url={url} />
   }
 
-  const { hero, layout } = page
+
 
   return (
-    // <article className="pt-16 pb-24">
-    //   <PageClient />
-    //   {/* Allows redirects for valid pages too */}
-    //   <PayloadRedirects disableNotFound url={url} />
+  // banner picture
+    <div className="relative mb-40">
+      <div className="h-[600px] w-full">
+        {banner && <img src={banner.url} alt={banner.alt || "Home banner"} className="h-full w-full object-cover" />}
+      </div>
 
-    //   {draft && <LivePreviewListener />}
 
-    //   <RenderHero {...hero} />
-    //   <RenderBlocks blocks={layout} />
-    // </article>
-<div className="relative">
-  <Link href="https://media.istockphoto.com/id/2163867926/photo/hospital-doctor-using-spreadsheet-for-billing-codes-on-desktop.jpg?s=1024x1024&w=is&k=20&c=e5qmQZlbJ-ZoVx9spGErft0Rz5PaN4MZx8r8-6QpxIk=">
-
-    <Image
-      src="https://media.istockphoto.com/id/2163867926/photo/hospital-doctor-using-spreadsheet-for-billing-codes-on-desktop.jpg?s=1024x1024&w=is&k=20&c=e5qmQZlbJ-ZoVx9spGErft0Rz5PaN4MZx8r8-6QpxIk="
-      alt="Care Management Photo"
-      width={500}
-      height={400}
-      className="w-full h-[200px] md:h-[300px] object-cover"
-    />
-
-    <div className="absolute top-2/3 lg:top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-2/3 w-full text-center text-white text-2xl md:text-3xl">
-      Marin Section On Aging
+  {/* description paragraph  */}
+    <div className="text-center max-w-[800px] mx-auto mt-10 mb-20 text-xl">
+      <div>The Marin Section on Aging is a coalition of agencies, organizations and individuals
+        concerned with the well-being of older persons. We are a network alliance advocating
+        for and promoting the development, coordination and implementation of older adult services
+        in Marin.  We hold morning meetings the 3rd Thursday of each month featuring speakers and member
+        networking opportunities.
+        </div>
+        <Link href="/members">
+        <button className={"text-blue-950  bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>MEMBERS DIRECTORY → </button>
+        </Link>
+        <Link href="/contact">
+        <button className={"bg-gray-100 border border-gray-200 hover:bg-gray-200 mt-5 text-sm  rounded-full rounded-base shadow px-4 py-2.5 "}>BECOME A MEMBER</button>
+        </Link>
     </div>
 
-  </Link>
+{/* next meeting */}
+<div className="py-10">
+<Meetings />
 </div>
+
+    </div>
   )
 }
 

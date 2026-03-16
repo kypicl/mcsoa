@@ -5,16 +5,21 @@ import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import React from 'react'
 
-import { AdminBar } from '@/components/AdminBar'
 import { Footer } from '@/Footer/Component'
 import { Header } from '@/Header/Component'
-import { Providers } from '@/providers'
-import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
-import { draftMode } from 'next/headers'
+
 
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
+import { DM_Sans } from "next/font/google";
+
+const dmsans = DM_Sans({
+  weight: ["400"],
+  style: "normal",
+  subsets: ["latin"],
+  display: "swap",
+})
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 
@@ -27,10 +32,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
       </head>
       <body>
+        <div className={`${dmsans.className} antialiased`}>
           <Header />
           {children}
           <Footer />
-
+          </div>
       </body>
     </html>
   )
