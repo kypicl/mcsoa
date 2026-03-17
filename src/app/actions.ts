@@ -12,3 +12,14 @@ export async function fetchMembers({ page = 1, limit=10, sort = 'category'}) {
     })
     return members.docs
 }
+
+export async function fetchPosts({ page = 1, limit=2, sort = '-createdAt'}) {
+    const payload = await getPayload({ config: buildConfig })
+    const posts = await payload.find({
+        collection: 'posts',
+        limit,
+        sort,
+        page,
+    })
+    return posts.docs
+}
