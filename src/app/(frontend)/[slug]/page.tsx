@@ -8,6 +8,7 @@ import React, { cache } from 'react'
 import { homeStatic } from '@/endpoints/seed/home-static'
 import Link from 'next/link'
 import Meetings from './meetings'
+import LatestPosts from './latest_posts'
 
 import { generateMeta } from '@/utilities/generateMeta'
 
@@ -99,9 +100,9 @@ export default async function Page({ params: paramsPromise }: Args) {
     </div>
 
 {/* next meeting */}
-<div className="py-10">
+
 <Meetings />
-</div>
+<LatestPosts />
 
     </div>
   )
