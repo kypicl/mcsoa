@@ -17,8 +17,8 @@ export default async function LatestPosts() {
 
             {posts.map(post => (
                 <div className="shadow-lg rounded-lg p-10" key={post.title}>
-                    <p>{post.publishedAt}</p>
                     <p>{post.title}</p>
+                    <p>{JSON.stringify(post.content.root.children[0].children[0].text)}</p>
                     </div>
         ))}
 

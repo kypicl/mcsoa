@@ -37,7 +37,7 @@ export default function Meetings() {
     <h3 className="text-xl pb-4 font-semibold underline decoration-[#ffb703] decoration-3 underline-offset-[13px]">Next Meeting</h3>
     <div>Date</div>
     <div>Time</div>
-    <div className="py-5">In person only!</div>
+    <div className="py-5 underline">In person only!</div>
     <div>The Redwoods Senior Community <br/>
     40 Camino Alto, Mill Valley  <br/>
   (across from Mt Tam High School)
@@ -60,10 +60,15 @@ export default function Meetings() {
         />
       )}
       </div>
-      <div className="w-3/5 mr-10">
+      <div className="w-3/5 mr-1">
+
       {post.content && (
-        <div>{post.content.root.children[0].children[0].text}</div>
+        <div className="text-lg pb-5">{post.content.root.children[0].children[0].text}</div>
       )}
+      {post.content && (
+        <div>{post.content.root.children[1].children[0].text} ...</div>
+      )}
+      <div className="text-end pr-5 text-gray-700 underline">read more</div>
       </div>
     </div>
   </div>
