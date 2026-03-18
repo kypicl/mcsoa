@@ -79,12 +79,14 @@ export default async function Page({ params: paramsPromise }: Args) {
   // banner picture
     <div className="relative mb-40">
       <div className="h-[600px] w-full">
-        {banner && <img src={banner.url} alt={banner.alt || "Home banner"} className="h-full w-full object-cover" />}
+        {banner &&
+        <img src={banner.url} alt={banner.alt || "Home banner"}
+        className="h-full w-full object-cover" />}
       </div>
 
 
   {/* description paragraph  */}
-    <div className="text-center max-w-[800px] mx-auto mt-10 mb-20 text-xl">
+    <div className="text-center max-w-[800px] mx-auto mt-10 mb-10 text-xl">
       <div>The Marin Section on Aging is a coalition of agencies, organizations and individuals
         concerned with the well-being of older persons. We are a network alliance advocating
         for and promoting the development, coordination and implementation of older adult services

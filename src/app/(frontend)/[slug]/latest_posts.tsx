@@ -14,7 +14,7 @@ export default async function LatestPosts() {
       </div>
 
       {/* Posts */}
-      <div className="grid grid-cols-2 gap-10">
+      <div className="md:grid md:grid-cols-2 gap-10">
 
             {posts.map(post => (
                 <div className="shadow-lg rounded-lg p-10" key={post.title}>
@@ -26,7 +26,7 @@ export default async function LatestPosts() {
 
       </div>
     <Link href="/blog">
-      <div className="text-end pt-5 underline">read more posts here</div>
+      <div className="text-end pt-5 underline text-gray-700">read more posts here</div>
     </Link>
     </div>
   )

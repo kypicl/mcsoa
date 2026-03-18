@@ -30,10 +30,10 @@ export default function Meetings() {
   if (!post) return <div>Loading... </div>
 
     return (
-      <div className="flex justify-center">
-<div className="max-w-[1100px] m-10 flex items-center py-8">
+      <div className="md:flex justify-center">
+<div className="max-w-[1100px] m-10 md:flex items-center py-8">
 
-  <div className="w-1/3 h-[385px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
+  <div className="md:w-1/3 h-[385px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
     <h3 className="text-xl pb-4 font-semibold underline decoration-[#ffb703] decoration-3 underline-offset-[13px]">Next Meeting</h3>
     <div>Date</div>
     <div>Time</div>
@@ -45,7 +45,7 @@ export default function Meetings() {
     <div className="pt-4">Any questions please email us: info@marinsectiononaging.org</div>
   </div>
 
-  <div className="pl-8 w-2/3 h-[350px] bg-white shadow shadow-md inset-shadow-sm rounded-lg py-5">
+  <div className="pl-8 md:w-2/3 h-[350px] bg-white shadow shadow-md inset-shadow-sm rounded-lg py-5">
   <div className="text-xl">{post.title}</div>
     <div className="flex gap-10 w-full justify-center mt-5">
       <div className="w-1/3">
