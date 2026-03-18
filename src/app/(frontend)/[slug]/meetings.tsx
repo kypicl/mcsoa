@@ -66,7 +66,7 @@ export default function Meetings() {
         <div className="text-lg pb-5">{post.content.root.children[0].children[0].text}</div>
       )}
       {post.content && (
-        <div>{post.content.root.children[1].children[0].text} ...</div>
+        <div>{post.content.root.children[1].children[0].text}</div>
       )}
       <div className="text-end pr-5 text-gray-700 underline">read more</div>
       </div>
