@@ -96,7 +96,7 @@ export default async function Page({ params: paramsPromise }: Args) {
         <Link href="/members">
         <button className={"text-blue-950  bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>MEMBERS DIRECTORY → </button>
         </Link>
-        <Link href="https://docs.google.com/forms/d/e/1FAIpQLScefidUcyfXGj5fDoW_-DmddJNgHxxnyXn7kVbU35Mg9EQzaQ/viewform?usp=header">
+        <Link href="/becomeamember">
         <button className={"bg-gray-100 border border-gray-200 hover:bg-gray-200 mt-5 text-sm  rounded-full rounded-base shadow px-4 py-2.5 "}>BECOME A MEMBER</button>
         </Link>
     </div>

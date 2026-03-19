@@ -19,7 +19,7 @@ export function Header() {
     { href: "/members", label: "MEMBERS" },
     { href: "/aboutus", label: "ABOUT US" },
     { href: "/blog", label: "BLOG" },
-    { href: "/contact", label: "CONTACT" },
+    { href: "/becomeamember", label: "BECOME A MEMBER" },
   ]
 
 useEffect(() => {
