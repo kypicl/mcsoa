@@ -30,10 +30,10 @@ export default function Meetings() {
   if (!post) return <div>Loading... </div>
 
     return (
-      <div className="md:flex justify-center">
-<div className="max-w-[1100px] m-10 md:flex items-center py-8">
+      <div className="lg:flex justify-center">
+<div className="lg:max-w-[1100px]  m-10 lg:flex items-center py-8 place-items-center">
 
-  <div className="md:w-1/3 h-[385px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
+  <div className="lg:w-1/3 lg:ml-0 w-[400px] h-[385px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
     <h3 className="text-xl pb-4 font-semibold underline decoration-[#ffb703] decoration-3 underline-offset-[13px]">Next Meeting</h3>
     <div>Date</div>
     <div>Time</div>
@@ -45,10 +45,10 @@ export default function Meetings() {
     <div className="pt-4">Any questions please email us: info@marinsectiononaging.org</div>
   </div>
 
-  <div className="pl-8 md:w-2/3 h-[350px] bg-white shadow shadow-md inset-shadow-sm rounded-lg py-5">
+  <div className="place-content-center place-items-center lg:place-items-start md:w-[600px] lg:mr-0 w-[400px] text-center lg:text-left px-6 lg:px-0 lg:pl-8 lg:w-2/3 lg:h-[350px] bg-white shadow shadow-md inset-shadow-sm rounded-lg py-5">
   <div className="text-xl">{post.title}</div>
-    <div className="flex gap-10 w-full justify-center mt-5">
-      <div className="w-1/3">
+    <div className="lg:flex gap-5 w-full lg:justify-center mt-5 place-items-center ">
+      <div className="lg:w-1/3 pb-4 lg:pb-0">
       {!post.content && (
         <div className="text-xl">Next Speaker coming soon</div>
       )}
@@ -60,7 +60,7 @@ export default function Meetings() {
         />
       )}
       </div>
-      <div className="w-3/5 mr-1">
+      <div className="lg:w-3/5 lg:mr-1">
 
       {post.content && (
         <div className="text-lg pb-5">{post.content.root.children[0].children[0].text}</div>

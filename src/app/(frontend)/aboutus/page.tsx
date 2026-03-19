@@ -30,10 +30,11 @@ export default async function AboutUsPage() {
         </div>
       </div>
 
+<div className="md:bg-gray-100 lg:bg-transparent"></div>
 {/* 1. Row of Volunteers */}
 
-      <div className="md:grid md:grid-cols-3 md:gap-5 items-stretch">
-            <div className="h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+      <div className="md:grid md:grid-cols-3 md:gap-5">
+            <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -50,7 +51,7 @@ export default async function AboutUsPage() {
           <div className="text-sm">(415) 324-5088</div>
         </div>
 
-            <div className="text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+            <div className="mb-5 md:mb-0 text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -91,7 +92,7 @@ export default async function AboutUsPage() {
 {/* 2. Row of Volunteers */}
        <div className="max-w-[1400px] w-full mx-auto px-6 mb-40 place-content-center">
       <div className="md:grid md:grid-cols-4 md:gap-5 lg:gap-0 min-h-[200px]">
-            <div className="h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+            <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -109,7 +110,7 @@ export default async function AboutUsPage() {
           <div className="text-sm">(415) 294-0505</div>
         </div>
 
-            <div className="h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+            <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -127,7 +128,7 @@ export default async function AboutUsPage() {
           <div className="text-sm">libby@senior-settlers.com</div>
         </div>
 
-            <div className="h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+            <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -145,7 +146,7 @@ export default async function AboutUsPage() {
           <div className="text-sm">cmigdal@sageeldercare.com</div>
         </div>
 
-            <div className="h-full ext-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+            <div className="mb-5 md:mb-0 h-full ext-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
