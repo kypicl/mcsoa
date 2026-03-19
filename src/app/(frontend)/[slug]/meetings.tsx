@@ -30,8 +30,8 @@ export default function Meetings() {
   if (!post) return <div>Loading... </div>
 
     return (
-      <div className="lg:flex justify-center">
-<div className="lg:max-w-[1100px]  m-10 lg:flex items-center py-8 place-items-center">
+      <div className="lg:flex  justify-center">
+<div className="lg:max-w-[1100px]  m-10 gap-5 lg:flex items-center py-8 place-items-center">
 
   <div className="lg:w-1/3 lg:ml-0 w-[400px] h-[385px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
     <h3 className="text-xl pb-4 font-semibold underline decoration-[#ffb703] decoration-3 underline-offset-[13px]">Next Meeting</h3>
