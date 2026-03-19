@@ -1,30 +1,31 @@
+
 import React, { useEffect, useState } from "react"
-import { fetchMembers } from "@/app/actions"
-
-type Media = {
-        id: number
-        url: string
-        alt?: string
-}
-
-type Member = {
-    id: string
-    name: string
-    category?: string
-    contact_name?: string
-    description?: string
-    link?: string
-    email?: string
-    address?: string
-    phone?: string
-}
+import { getPayload } from 'payload'
+import config from '@payload-config'
+import { MemberList } from '@/components/MemberList'
 
 export default async function Members() {
 
-    //const [members, setMembers] = useState<Member[]>([]);
-    //const [banner, setBanner] = useState<Media | null>(null);
+    const payload = await getPayload({ config})
+    const {docs} = await payload.find({
+        collection: 'members',
+        sort: 'category',
+        limit: 100,
+    })
 
-    const members = await fetchMembers({ page: 1, limit: 100, sort: 'category' });
+    const members = docs.map(({id, name, category, contact_name, description, link, email, address, phone, logo}) => ({
+        id,
+        name,
+        category: category as string,
+        contact_name,
+        description,
+        link,
+        email,
+        address,
+        phone,
+        logo: logo as unknown as {url: string}
+    }))
+
     /*
     useEffect(() => {
         fetch("http://localhost:3000/api/members")
@@ -32,43 +33,37 @@ export default async function Members() {
         .then(data => setMembers(data.docs));
     }, [])
 
-    const bannerImage = await payload.find({
-        collection: "media",
-        where: {
-            filename: {
-                equals: "Small Members Banner.png",
-            }
-        })
-
     useEffect(() => {
         fetch("http://localhost:3000/api/media/3")
         .then(res => res.json())
         .then(data => setBanner(data));
     }, [])
     */
+  var categories: string[] = [];
+  for (var i = 0; i < members.length; i++) {
+    if (members[i].category && !categories.includes(members[i].category as string)) {
+      categories.push(members[i].category as string);
+    }
+  }
+
+  //const [selectCategory, setSelectCategory] = useState<string>("general");
 
   return (
     <>
-<div className="h-[400px] w-full">
-
-
-  <img
-    src={process.env.NEXT_PUBLIC_SERVER_URL + '/api/media/file/Small%20Members%20Banner.png'}
-    alt={"Members banner"}
-    className="h-full w-full object-cover"
-  />
-
-
-</div>
-
-    <div>
-        {members.map(member => (
-            <div key={member.id}>
-                <h3>{member.name}</h3>
-                <p>{member.description}</p>
-                </div>
-        ))}
+    <div className="h-[400px] w-full">
+      
+      
+      <img
+        src={process.env.NEXT_PUBLIC_SERVER_URL + '/api/media/file/Small%20Members%20Banner.png'}
+        alt={"Members banner"}
+        className="h-full w-full object-cover"
+      />
+    
+      
     </div>
+    <td>
+        <MemberList members={members} />
+    </td>
     </>
   )
 }

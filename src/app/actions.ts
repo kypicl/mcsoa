@@ -1,4 +1,4 @@
-'use server'
+"use server"
 import { getPayload } from 'payload'
 import buildConfig from '@/payload.config'
 
@@ -10,6 +10,7 @@ export async function fetchMembers({ page = 1, limit=10, sort = 'category'}) {
         limit,
         page,
     })
+
     return members.docs
 }
 
