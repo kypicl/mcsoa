@@ -65,7 +65,7 @@ export default async function AboutUsPage() {
           <div className="text-md px-2">5-Minute Company Highlight/Gift</div>
           <div className="text-md pb-3">Sponsor Coordinator</div>
           <div className="text-sm">Suncrest Hospice</div>
-          <div className="text-sm underline"><Link href="suncresthospicecare.com/">suncresthospicecare.com/</Link></div>
+          <div className="text-sm underline"><Link href="https://www.suncresthospicecare.com/">suncresthospicecare.com/</Link></div>
           <div className="text-sm">LGarbarino@suncrestcare.com</div>
         </div>
 
