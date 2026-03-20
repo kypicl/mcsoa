@@ -1,4 +1,5 @@
 import { fetchPosts } from "@/app/actions"
+import Page from "../posts/page"
 
 
 export default async function Posts() {
@@ -7,16 +8,17 @@ export default async function Posts() {
 
     return (
         <>
-        <div className="md:grid md:grid-cols-2 md:gap-10">
+        <div className="">
+            <Page />
 
-            {posts.map(post => (
+            {/* {posts.map(post => (
                 <div className="shadow-lg rounded-lg p-10" key={post.title}>
                     <p className="text-xl font-bold">{post.title}</p>
                     <p>{JSON.stringify(post.content.root.children[0].children[0].text)}</p>
 
                     <p className="pt-5 text-end text-sm text-gray-500 hover:text-gray-900">continue reading...</p>
                     </div>
-        ))}
+        ))} */}
 
       </div>
         </>

@@ -49,7 +49,13 @@ export const Users: CollectionConfig = {
   ],
 }
 
+import { lexicalEditor } from '@payloadcms/richtext-lexical';
 
+{
+  name: 'content',
+  type: 'richText',
+  editor: lexicalEditor(),
+}
 
 ```
 

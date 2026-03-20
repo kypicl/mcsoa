@@ -6,7 +6,7 @@ import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import { draftMode } from 'next/headers'
 import React, { cache } from 'react'
-// import RichText from '@/components/RichText'
+import RichText from '@/components/RichText'
 
 import type { Post } from '@/payload-types'
 
@@ -52,7 +52,7 @@ export default async function Post({ params: paramsPromise }: Args) {
   if (!post) return <PayloadRedirects url={url} />
 
   return (
-    <article className="pt-16 pb-16">
+    <article className="z-0 pb-16 ">
       <PageClient />
 
       {/* Allows redirects for valid pages too */}

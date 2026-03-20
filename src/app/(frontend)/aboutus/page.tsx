@@ -47,7 +47,7 @@ export default async function AboutUsPage() {
           <div className="text-xl font-bold pt-2 text-[#272757]">Terri Abelar</div>
           <div className="text-md pb-3">Business Officer</div>
           <div className="text-sm">Aging Solutions, Inc.</div>
-          <div className="text-sm underline"><Link href="https://agingsolutions.com/">agingsolution.com</Link></div>
+          <div className="text-sm underline"><Link href="https://agingsolutions.com/">agingsolutions.com</Link></div>
           <div className="text-sm">(415) 324-5088</div>
         </div>
 
