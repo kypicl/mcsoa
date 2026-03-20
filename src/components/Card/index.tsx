@@ -8,7 +8,7 @@ import type { Post } from '@/payload-types'
 
 import { Media } from '@/components/Media'
 
-export type CardPostData = Pick<Post, 'slug' | 'categories' | 'meta' | 'title'>
+export type CardPostData = Pick<Post, 'slug' | 'categories' | 'meta' | 'title' | 'heroImage'>
 
 export const Card: React.FC<{
   alignItems?: 'center'
@@ -21,26 +21,33 @@ export const Card: React.FC<{
   const { card, link } = useClickableCard({})
   const { className, doc, relationTo, showCategories, title: titleFromProps } = props
 
-  const { slug, categories, meta, title } = doc || {}
+  const { slug, categories, meta, title, heroImage } = doc || {}
   const { description, image: metaImage } = meta || {}
+  const displayImage = metaImage || heroImage
+
+
 
   const hasCategories = categories && Array.isArray(categories) && categories.length > 0
   const titleToUse = titleFromProps || title
   const sanitizedDescription = description?.replace(/\s/g, ' ') // replace non-breaking space with white space
   const href = `/${relationTo}/${slug}`
 
+
   return (
     <article
       className={cn(
-        'border border-border rounded-lg overflow-hidden bg-card hover:cursor-pointer',
+        'border border-border rounded-lg py-5 overflow-hidden bg-card hover:cursor-pointer',
         className,
       )}
       ref={card.ref}
     >
-      <div className="relative w-full ">
-        {!metaImage && <div className="">No image</div>}
-        {metaImage && typeof metaImage !== 'string' && <Media resource={metaImage} size="33vw" />}
-      </div>
+<div className="relative place-self-center rounded-lg w-[250px] aspect-[9/9]">
+  {!displayImage && <div>No image</div>}
+
+  {displayImage && typeof displayImage !== 'string' && (
+    <Media fill resource={displayImage} className="object-cover  " />
+  )}
+</div>
       <div className="p-4">
         {showCategories && hasCategories && (
           <div className="uppercase text-sm mb-4">
@@ -70,14 +77,22 @@ export const Card: React.FC<{
         )}
         {titleToUse && (
           <div className="prose">
-            <h3>
+            <h3 className="text-xl">
               <Link className="not-prose" href={href} ref={link.ref}>
                 {titleToUse}
               </Link>
             </h3>
           </div>
         )}
-        {description && <div className="mt-2">{description && <p>{sanitizedDescription}</p>}</div>}
+        <p className="mt-2 text-sm text-gray-700">
+  {(() => {
+    const text = doc.content?.root?.children?.[0]?.children?.[0]?.text ?? 'No description';
+    const maxChars = 200; // <-- change this to your limit
+    return text.length > maxChars ? text.slice(0, maxChars) + '…' : text;
+  })()}
+  </p>
+  <p className="text-end mt-2">read more here →</p>
+
       </div>
     </article>
   )

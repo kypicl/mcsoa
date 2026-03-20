@@ -6,7 +6,7 @@ import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import { draftMode } from 'next/headers'
 import React, { cache } from 'react'
-import RichText from '@/components/RichText'
+import RichText from '@/components/RichText/index'
 
 import type { Post } from '@/payload-types'
 
@@ -19,6 +19,7 @@ export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
   const posts = await payload.find({
     collection: 'posts',
+    depth:1,
     draft: false,
     limit: 1000,
     overrideAccess: false,
@@ -27,6 +28,7 @@ export async function generateStaticParams() {
       slug: true,
     },
   })
+
 
   const params = posts.docs.map(({ slug }) => {
     return { slug }
@@ -48,6 +50,7 @@ export default async function Post({ params: paramsPromise }: Args) {
   const decodedSlug = decodeURIComponent(slug)
   const url = '/posts/' + decodedSlug
   const post = await queryPostBySlug({ slug: decodedSlug })
+  console.log(post.content)
 
   if (!post) return <PayloadRedirects url={url} />
 
@@ -62,7 +65,7 @@ export default async function Post({ params: paramsPromise }: Args) {
 
       <PostHero post={post} />
 
-      <div className="flex flex-col items-center gap-4 pt-8">
+      <div className="flex flex-col items-center gap-5 pt-8">
         <div className="container">
           <RichText className="max-w-[48rem] mx-auto" data={post.content} enableGutter={false} />
           {post.relatedPosts && post.relatedPosts.length > 0 && (
