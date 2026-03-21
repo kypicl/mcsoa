@@ -1,9 +1,12 @@
 
 import { fetchPosts } from "@/app/actions"
 import Link from "next/link";
+import { Media } from '@/components/Media'
 
 export default async function LatestPosts() {
     const posts = await fetchPosts({ page:1, limit:2, sort:'-createdAt' });
+
+
 
   return (
     <div className="max-w-[1000px] w-full mx-auto px-6 my-20">
@@ -15,14 +18,25 @@ export default async function LatestPosts() {
 
       {/* Posts */}
       <div className="md:grid md:grid-cols-2 gap-10">
+        {posts.map((post) => {
+  const image = post.heroImage || post.meta?.image
 
-            {posts.map(post => (
-                <div className="shadow-lg rounded-lg p-10" key={post.title}>
-                    <p className="text-xl font-bold">{post.title}</p>
+  return (
+    <div key={post.title} className="shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg py-5 overflow-hidden bg-card hover:cursor-pointer">
+    <div className="relative w-[250px] aspect-[9/9] mb-4">
+      {image && typeof image !== 'string' && (
+        <Media fill resource={image} className="object-cover rounded-lg" />
+      )}
+    </div>
+    <p className="text-xl font-bold">{post.title}</p>
+
+
+
                     <p>{JSON.stringify(post.content.root.children[0].children[0].text)}</p>
                     <p className="pt-5 text-end text-sm text-gray-500 hover:text-gray-900">continue reading...</p>
-                    </div>
-        ))}
+    </div>
+  )
+})}
 
       </div>
     <Link href="/blog">

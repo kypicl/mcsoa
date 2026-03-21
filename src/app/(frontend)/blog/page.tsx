@@ -18,7 +18,7 @@ export default async function BlogPage() {
        )}
       </div>
       </div>
-  <div className="max-w-[1200px] w-full mx-auto mt-20 px-6 my-20">
+  <div className="max-w-[1200px] w-full mx-auto  px-6 my-20">
       <Posts/>
     </div>
     </>
