@@ -30,7 +30,7 @@ const posts = await payload.find({
   console.log(posts)
 
   return (
-    <div className="pb-24">
+    <div className="pb-24 ">
       <PageClient />
       <div className="container mb-16">
         <div className="prose dark:prose-invert max-w-none">
