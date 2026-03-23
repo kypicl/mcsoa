@@ -9,7 +9,7 @@ export default async function LatestPosts() {
 
 
   return (
-    <div className="max-w-[1000px] w-full mx-auto px-6 my-20">
+    <div className="max-w-[1100px] w-full mx-auto px-6 my-20">
 
       {/* Header */}
       <div className="text-4xl text-[#2F4663] pl-10 mb-8 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
@@ -17,13 +17,13 @@ export default async function LatestPosts() {
       </div>
 
       {/* Posts */}
-      <div className="md:grid md:grid-cols-2 gap-10">
+      <div className="md:grid md:grid-cols-2 gap-10 ">
         {posts.map((post) => {
   const image = post.heroImage || post.meta?.image
 
   return (
-    <div key={post.title} className="shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg py-5 overflow-hidden bg-card hover:cursor-pointer">
-    <div className="relative w-[250px] aspect-[9/9] mb-4">
+    <div key={post.title} className="text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg py-5 overflow-hidden bg-card hover:cursor-pointer">
+    <div className="relative w-[250px] aspect-[9/9] mb-4 place-self-center">
       {image && typeof image !== 'string' && (
         <Media fill resource={image} className="object-cover rounded-lg" />
       )}

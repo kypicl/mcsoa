@@ -8,7 +8,7 @@ export default async function BlogPage() {
   return    (
     <>
     <div className="relative">
-      <div className="h-[400px] w-full">
+      <div className="h-[400px] w-full place-self-center">
        {media?.url && (
         <img
         src={media.url}
