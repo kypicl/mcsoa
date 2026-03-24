@@ -51,19 +51,19 @@ export default async function Members() {
   return (
     <>
     <div className="h-[400px] w-full">
-      
-      
+
+
       <img
         src={process.env.NEXT_PUBLIC_SERVER_URL + '/api/media/file/Small%20Members%20Banner.png'}
         alt={"Members banner"}
         className="h-full w-full object-cover"
       />
-    
-      
+
+
     </div>
-    <td>
+    <div className="">
         <MemberList members={members} />
-    </td>
+    </div>
     </>
   )
 }
