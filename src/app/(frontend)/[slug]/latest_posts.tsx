@@ -23,11 +23,12 @@ export default async function LatestPosts() {
 
   return (
     <div key={post.title} className="text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg py-5 overflow-hidden bg-card hover:cursor-pointer">
+    <div className="flex justify-center">
     <div className="relative w-[250px] aspect-[9/9] mb-4 place-self-center">
       {image && typeof image !== 'string' && (
         <Media fill resource={image} className="object-cover rounded-lg" />
       )}
-    </div>
+    </div></div>
     <p className="text-xl font-bold">{post.title}</p>
 
 

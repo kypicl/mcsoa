@@ -41,13 +41,14 @@ export const Card: React.FC<{
       )}
       ref={card.ref}
     >
+      <div className="flex justify-center">
 <div className="relative place-self-center rounded-lg w-[250px] aspect-[9/9]">
   {!displayImage && <div>No image</div>}
 
   {displayImage && typeof displayImage !== 'string' && (
     <Media fill resource={displayImage} className="object-cover  " />
   )}
-</div>
+</div></div>
       <div className="p-4">
         {showCategories && hasCategories && (
           <div className="uppercase text-sm mb-4">
