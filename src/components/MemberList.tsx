@@ -52,8 +52,10 @@ export function MemberList({ members }: { members: Member[] }) {
                 <p>If you need to make edits to your submission please click
                   <Link href="https://docs.google.com/forms/d/e/1FAIpQLScefidUcyfXGj5fDoW_-DmddJNgHxxnyXn7kVbU35Mg9EQzaQ/viewform?usp=header" className="underline hover:text-blue-500 ml-1">here</Link></p>
       </div>
-      <div className="flex justify-center">
-       <button className={"text-blue-950 bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mb-10 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>BECOME A MEMBER→ </button></div>
+      <div className="flex justify-center"><Link href="/becomeamember">
+       <button className={"text-blue-950 bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mb-10 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>
+        BECOME A MEMBER→
+        </button></Link></div>
     <div className="my-8 md:flex gap-10 justify-center">
       <div className="rounded-lg px-2 py-1.5 w-[300px] shadow-lg inset-shadow-sm ">
         <div className="flex rounded-lg">
