@@ -52,11 +52,13 @@ export function MemberList({ members }: { members: Member[] }) {
       <div className="border rounded-lg px-2 py-1.5 w-[300px] shadow">
         <div className="flex rounded-lg bg-white">
         <Image src={searchicon} alt="searchicon" className="h-[30px] w-[30px]"/>
-        <input className="bg-white rounded-lg" value={filter} onChange={e => setFilter(e.target.value)} />
+        <input className="bg-white rounded-lg" value={nameFilter} onChange={e => setNameFilter(e.target.value)} />
       </div>
       </div>
             <div className="border rounded-lg px-2 py-1.5 w-[300px]">
-      <select onChange={e => setFilter(e.target.value)} name= "select category" id="category">
+      <select onChange={e => setCategoryFilter(e.target.value)} name= "select category" id="category">
+        <option selected disabled>Filter by category</option>
+        <option value= "">All Categories</option>
         {categories.map((category) => (
           <option value={category}>
             {category}
