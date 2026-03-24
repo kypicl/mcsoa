@@ -44,7 +44,7 @@ export function MemberList({ members }: { members: Member[] }) {
       categories.push(members[i].category as string);
     }
   }
-  console.log(members)
+
   return (
     <div className="mx-10 max-w-[900px] lg:mx-auto ">
     <div className="my-8 flex gap-10 justify-center">
@@ -69,10 +69,10 @@ export function MemberList({ members }: { members: Member[] }) {
 {/* Members Cards */}
       {filtered.map(p => (
         <div key={p.id}>
-          <div className="bg- mb-8 p-10 shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg overflow-hidden bg-card hover:cursor-pointer">
-            <div className="md:flex w-full">
-              <div className="w-1/4">
-      <div className=" h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
+          <div className="mb-8 p-10 shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg overflow-hidden bg-card hover:cursor-pointer">
+            <div className="lg:flex w-full place-self-center">
+              <div className="lg:w-1/4">
+      <div className="place-self-center h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilePicPlaceholder?.url && (
         <img
         src={profilePicPlaceholder.url}
@@ -82,16 +82,16 @@ export function MemberList({ members }: { members: Member[] }) {
        )}
        </div>
       </div>
-      <div className="w-3/4 text-center">
+      <div className="lg:w-3/4 text-center">
       <p className="text-[#2F4663] font-semibold">{p.category}</p>
       <p className="font-bold text-2xl text-[#2F4663] underline decoration-[#ffb703] decoration-1 underline-offset-[10px]">{p.name}</p>
-      <div className="flex gap-8 justify-center mt-3 ">
-      <p className="w-1/2 text-end">👤 {p.contact_name}</p>
-      <Link href={p.link} className="underline w-1/2 text-start">{p.link}</Link>
+      <div className="lg:flex gap-8 justify-center mt-3 ">
+      <p className="lg:w-1/2 lg:text-end">👤 {p.contact_name}</p>
+      <Link href={p.link} className="underline lg:w-1/2 lg:text-start">{p.link}</Link>
       </div>
-      <div className="flex gap-8 mb-3 justify-center ">
-      <p className="w-1/2 text-end">📞 {p.phone}</p>
-      <p className="w-1/2 text-start">✉️ {p.email}</p>
+      <div className="lg:flex gap-8 mb-3 justify-center ">
+      <p className="lg:w-1/2 lg:text-end">📞 {p.phone}</p>
+      <p className="lg:w-1/2 lg:text-start">✉️ {p.email}</p>
       </div>
 
       <p className="mb-3 text-sm ">{p.description}</p>
