@@ -17,10 +17,11 @@ type Member = {
 }
 
 export function MemberList({ members }: { members: Member[] }) {
-  const [filter, setFilter] = useState('')
+  const [nameFilter, setNameFilter] = useState('')
+  const [categoryFilter, setCategoryFilter] = useState('')
 
   const filtered = members.filter(m =>
-    m.name.toLowerCase().includes(filter.toLowerCase())
+    m.name.toLowerCase().includes(nameFilter.toLowerCase()) && m.category.toLowerCase().includes(categoryFilter.toLowerCase())
   )
 
   var categories: string[] = [];
@@ -32,9 +33,11 @@ export function MemberList({ members }: { members: Member[] }) {
 
   return (
     <div>
-      Search: <input value={filter} onChange={e => setFilter(e.target.value)} />
+      Search: <input value={nameFilter} onChange={e => setNameFilter(e.target.value)} />
       <div>
-      <select onChange={e => setFilter(e.target.value)} name= "select category" id="category">
+      <select onChange={e => setCategoryFilter(e.target.value)} name= "select category" id="category">
+        <option selected disabled>Filter by category</option>
+        <option value= "">All Categories</option>
         {categories.map((category) => (
           <option value={category}>
             {category}

@@ -9,7 +9,7 @@ export default async function Members() {
     const payload = await getPayload({ config})
     const {docs} = await payload.find({
         collection: 'members',
-        sort: 'category',
+        sort: 'name',
         limit: 100,
     })
 
@@ -46,8 +46,6 @@ export default async function Members() {
     }
   }
 
-  //const [selectCategory, setSelectCategory] = useState<string>("general");
-
   return (
     <>
     <div className="h-[400px] w-full">
@@ -61,9 +59,9 @@ export default async function Members() {
     
       
     </div>
-    <td>
+    <div>
         <MemberList members={members} />
-    </td>
+    </div>
     </>
   )
 }
