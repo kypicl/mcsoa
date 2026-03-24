@@ -3,13 +3,14 @@ import React, { useEffect, useState } from "react"
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { MemberList } from '@/components/MemberList'
+import Link from "next/link"
 
 export default async function Members() {
 
     const payload = await getPayload({ config})
     const {docs} = await payload.find({
         collection: 'members',
-        sort: 'name',
+        sort: 'category',
         limit: 100,
     })
 
@@ -39,12 +40,14 @@ export default async function Members() {
         .then(data => setBanner(data));
     }, [])
     */
-  /*var categories: string[] = [];
-  for (var i = 0; i < members.length; i++) {
-    if (members[i].category && !categories.includes(members[i].category as string)) {
-      categories.push(members[i].category as string);
-    }
-  }*/
+  // var categories: string[] = [];
+  // for (var i = 0; i < members.length; i++) {
+  //   if (members[i].category && !categories.includes(members[i].category as string)) {
+  //     categories.push(members[i].category as string);
+  //   }
+  // }
+
+  //const [selectCategory, setSelectCategory] = useState<string>("general");
 
   return (
     <>
@@ -56,8 +59,6 @@ export default async function Members() {
         alt={"Members banner"}
         className="h-full w-full object-cover"
       />
-
-
     </div>
     <div className="">
         <MemberList members={members} />

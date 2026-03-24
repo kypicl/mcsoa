@@ -19,7 +19,7 @@ export function Header() {
     { href: "/members", label: "MEMBERS" },
     { href: "/aboutus", label: "ABOUT US" },
     { href: "/blog", label: "BLOG" },
-    { href: "/becomeamember", label: "BECOME A MEMBER" },
+    { href: "/becomeamember", label: "BECOME A MEMBER"},
   ]
 
 useEffect(() => {
@@ -30,7 +30,7 @@ useEffect(() => {
 
   return (
     <>
-    <div className="border flex justify-between mx-auto py-4 pl-2 md:pr-4 md:pl-4 text-blue-950 h-[80px]  ">
+    <div className="border flex justify-between mx-auto py-4 pl-2 md:pr-4 md:pl-4 text-blue-950 h-[80px] text-sm md:text-base">
       <div className="flex items-center space-x-5" id="navbar-default">
     <button >
         <Link href="/">
