@@ -9,7 +9,7 @@ export default async function Members() {
     const payload = await getPayload({ config})
     const {docs} = await payload.find({
         collection: 'members',
-        sort: 'category',
+        sort: 'name',
         limit: 100,
     })
 
@@ -39,14 +39,12 @@ export default async function Members() {
         .then(data => setBanner(data));
     }, [])
     */
-  var categories: string[] = [];
+  /*var categories: string[] = [];
   for (var i = 0; i < members.length; i++) {
     if (members[i].category && !categories.includes(members[i].category as string)) {
       categories.push(members[i].category as string);
     }
-  }
-
-  //const [selectCategory, setSelectCategory] = useState<string>("general");
+  }*/
 
   return (
     <>
