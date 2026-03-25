@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { MemberList } from '@/components/MemberList'
-import Link from "next/link"
+import { fetchMedia } from '@/app/actions';
 
 export default async function Members() {
 
@@ -27,6 +27,9 @@ export default async function Members() {
         logo: logo as unknown as {url: string}
     }))
 
+    const banner = await fetchMedia({ mediaId:1 })
+    const logo = await fetchMedia({ mediaId:2})
+
     /*
     useEffect(() => {
         fetch("http://localhost:3000/api/members")
@@ -49,17 +52,24 @@ export default async function Members() {
 
   return (
     <>
-    <div className="h-[400px] w-full">
+    <div className="relative mb-20 lg:h-140 md:h-120 h-85">
+      <div className="absolute inset-0 w-full object-cover">
+        {banner?.url &&
+        <img src={banner.url} alt={banner.alt || "Home banner"}
+        className="h-full w-full object-cover" />}
 
 
-      <img
-        src={process.env.NEXT_PUBLIC_SERVER_URL + '/api/media/file/Small%20Members%20Banner.png'}
-        alt={"Members banner"}
-        className="h-full w-full object-cover"
-      />
-
+          <div className="flex justify-center ">
+        {logo?.url && (
+          <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-80 w-auto z-10" src={logo.url} alt={logo.alt || "Logo"} />
+        )}
+        </div>
+        </div>
 
     </div>
+
+
+
     <div className="">
         <MemberList members={members} />
     </div>

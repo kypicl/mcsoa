@@ -9,6 +9,7 @@ import { homeStatic } from '@/endpoints/seed/home-static'
 import Link from 'next/link'
 import Meetings from './meetings'
 import LatestPosts from './latest_posts'
+import { fetchMedia } from '@/app/actions'
 
 import { generateMeta } from '@/utilities/generateMeta'
 
@@ -51,6 +52,7 @@ type Media = {
 export default async function Page({ params: paramsPromise }: Args) {
   const bannerRes = await fetch("http://localhost:3000/api/media/1")
   const banner: Media = await bannerRes.json()
+  const logo = await fetchMedia({ mediaId:10 })
 
 
 
@@ -76,13 +78,23 @@ export default async function Page({ params: paramsPromise }: Args) {
 
 
   return (
-  // banner picture
-    <div className="relative mb-40">
-      <div className="lg:h-[600px] md:h-[400px] h-[300px] w-full">
+    <>
+  {/* // banner picture */}
+    <div className="relative mb-20 lg:h-140 md:h-120 h-85">
+      <div className="absolute inset-0 w-full object-cover">
         {banner &&
         <img src={banner.url} alt={banner.alt || "Home banner"}
         className="h-full w-full object-cover" />}
-      </div>
+
+
+          <div className="flex justify-center ">
+        {logo?.url && (
+          <img className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-60 md:h-70 lg:h-100 w-auto z-10" src={logo.url} alt={logo.alt || "Logo"} />
+        )}
+        </div>
+        </div>
+
+    </div>
 
 
   {/* description paragraph  */}
@@ -106,7 +118,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 <Meetings />
 <LatestPosts />
 
-    </div>
+    </>
   )
 }
 

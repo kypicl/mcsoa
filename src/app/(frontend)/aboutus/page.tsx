@@ -3,13 +3,14 @@ import { fetchMedia } from '@/app/actions';
 import Link from 'next/link';
 
 export default async function AboutUsPage() {
-  const media = await fetchMedia({ mediaId:7 })
+  const media = await fetchMedia({ mediaId:1 })
+  const aboutUsLogo = await fetchMedia({ mediaId:11})
   const profilepicplaceholder = await fetchMedia({ mediaId:8})
 
   return     (
     <>
-        <div className="relative mb-10">
-      <div className="h-[400px] w-full">
+    <div className="relative mb-20 lg:h-140 md:h-120 h-85">
+      <div className="absolute inset-0 w-full object-cover">
        {media?.url && (
         <img
         src={media.url}
@@ -17,8 +18,15 @@ export default async function AboutUsPage() {
         className="h-full w-full object-cover"
         />
        )}
+          <div className="flex justify-center">
+        {aboutUsLogo?.url && (
+          <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-80 w-auto z-10" src={aboutUsLogo.url} alt={aboutUsLogo.alt || "About Us Logo"} />
+        )}
+        </div>
+        </div>
       </div>
-      </div>
+
+
             <div className="max-w-[1200px] w-full mx-auto px-6 mb-10 place-content-center">
         <div className="text-center text-4xl text-[#2F4663]  mb-8 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
         Meet the Committee

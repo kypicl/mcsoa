@@ -3,21 +3,28 @@ import { fetchMedia } from '@/app/actions';
 import Link from 'next/link';
 
 export default async function ContactPage() {
-  const media = await fetchMedia({ mediaId:9 })
+  const banner = await fetchMedia({ mediaId:1 })
+  const logo = await fetchMedia({ mediaId:9 })
 
   return (
     <>
-      <div className="relative mb-10">
-      <div className="h-[400px] w-full">
-       {media?.url && (
-        <img
-        src={media.url}
-        alt={media.alt || ""}
-        className="h-full w-full object-cover"
-        />
-       )}
-      </div>
-      </div>
+    <div className="relative mb-10 lg:h-140 md:h-120 h-85">
+      <div className="absolute inset-0 w-full object-cover">
+        {banner?.url &&
+        <img src={banner.url} alt={banner.alt || "Home banner"}
+        className="h-full w-full object-cover" />}
+
+
+          <div className="flex justify-center ">
+        {logo?.url && (
+          <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-80 w-auto z-10" src={logo.url} alt={logo.alt || "Logo"} />
+        )}
+        </div>
+        </div>
+
+    </div>
+
+
       <div className="max-w-[1200px] w-full mx-auto px-6 mb-10 place-content-center text-center ">
           <p>If you need to make edits to your submission please click <Link href="https://docs.google.com/forms/d/e/1FAIpQLScefidUcyfXGj5fDoW_-DmddJNgHxxnyXn7kVbU35Mg9EQzaQ/viewform?usp=header" className="underline hover:text-blue-500">here</Link></p>
 <Link href="https://docs.google.com/forms/d/e/1FAIpQLScefidUcyfXGj5fDoW_-DmddJNgHxxnyXn7kVbU35Mg9EQzaQ/viewform?usp=header">
