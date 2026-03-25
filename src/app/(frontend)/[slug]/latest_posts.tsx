@@ -33,7 +33,11 @@ export default async function LatestPosts() {
 
 
                     <p>{JSON.stringify(post.content.root.children[0].children[0].text)}</p>
-                    <p className="pt-5 text-end text-sm text-gray-500 hover:text-gray-900">continue reading...</p>
+                    <p className="pt-5 text-end text-sm text-gray-500 hover:text-gray-900">
+                    <Link href={`/posts/${post.slug}`}>
+                    continue reading...
+                    </Link>
+                    </p>
     </div>
   )
 })}

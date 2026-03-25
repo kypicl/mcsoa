@@ -7,10 +7,7 @@ node_modules
 .vercel
 
 # Payload default media upload directory
-<<<<<<< HEAD
-# public/media/
-=======
->>>>>>> 589e5ecb867bb4da69366ca72fe3704745de3b69
+# public/media/cd 
 
 public/robots.txt
 public/sitemap*.xml
