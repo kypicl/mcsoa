@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { MemberList } from '@/components/MemberList'
+import Link from "next/link"
 
 export default async function Members() {
 

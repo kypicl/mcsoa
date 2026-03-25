@@ -33,8 +33,9 @@ export default async function AboutUsPage() {
 <div className="md:bg-gray-100 lg:bg-transparent"></div>
 {/* 1. Row of Volunteers */}
 
-      <div className="md:grid md:grid-cols-3 md:gap-5">
+      <div className="md:grid md:grid-cols-3 md:gap-5 ">
             <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+      <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -44,6 +45,7 @@ export default async function AboutUsPage() {
         />
        )}
       </div>
+      </div>
           <div className="text-xl font-bold pt-2 text-[#272757]">Terri Abelar</div>
           <div className="text-md pb-3">Business Officer</div>
           <div className="text-sm">Aging Solutions, Inc.</div>
@@ -52,6 +54,7 @@ export default async function AboutUsPage() {
         </div>
 
             <div className="mb-5 md:mb-0 text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+      <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -60,6 +63,7 @@ export default async function AboutUsPage() {
         className="h-full w-full object-cover rounded-full"
         />
        )}
+      </div>
       </div>
           <div className="text-xl font-bold pt-2 text-[#272757]">Lorena Garbarino</div>
           <div className="text-md px-2">5-Minute Company Highlight/Gift</div>
@@ -70,6 +74,7 @@ export default async function AboutUsPage() {
         </div>
 
             <div className="h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -78,6 +83,7 @@ export default async function AboutUsPage() {
         className="h-full w-full object-cover rounded-full"
         />
        )}
+      </div>
       </div>
           <div className="text-xl font-bold pt-2 text-[#272757]">William Foster</div>
           <div className="text-md pb-3 lg:px-2">Director of Community Relations</div>
@@ -93,6 +99,7 @@ export default async function AboutUsPage() {
        <div className="max-w-[1400px] w-full mx-auto px-6 mb-40 place-content-center">
       <div className="md:grid md:grid-cols-4 md:gap-5 lg:gap-0 min-h-[200px]">
             <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -101,7 +108,7 @@ export default async function AboutUsPage() {
         className="h-full w-full object-cover rounded-full"
         />
        )}
-      </div>
+      </div></div>
           <div className="text-xl font-bold pt-2 text-[#272757]">Johnell Davidson</div>
           <div className="text-md pb-3">Speaker Seeker</div>
 
@@ -111,6 +118,7 @@ export default async function AboutUsPage() {
         </div>
 
             <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -119,7 +127,7 @@ export default async function AboutUsPage() {
         className="h-full w-full object-cover rounded-full"
         />
        )}
-      </div>
+      </div></div>
           <div className="text-xl font-bold pt-2 text-[#272757]">Libby Wood</div>
           <div className="text-md pb-3">Certified Senior Move Manager</div>
           <div className="text-sm">Senior Settlers</div>
@@ -129,6 +137,7 @@ export default async function AboutUsPage() {
         </div>
 
             <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -137,7 +146,7 @@ export default async function AboutUsPage() {
         className="h-full w-full object-cover rounded-full"
         />
        )}
-      </div>
+      </div></div>
           <div className="text-xl font-bold pt-2 text-[#272757]">Carly Migdal</div>
           <div className="text-md pb-3"></div>
           <div className="text-sm">Sage Eldercare Solutions</div>
@@ -146,7 +155,8 @@ export default async function AboutUsPage() {
           <div className="text-sm">cmigdal@sageeldercare.com</div>
         </div>
 
-            <div className="mb-5 md:mb-0 h-full ext-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+            <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
+       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {profilepicplaceholder?.url && (
         <img
@@ -155,7 +165,7 @@ export default async function AboutUsPage() {
         className="h-full w-full object-cover rounded-full"
         />
        )}
-      </div>
+      </div></div>
           <div className="text-xl font-bold pt-2 text-[#272757]">Deonah Salari</div>
           <div className="text-md pb-3"></div>
           <div className="text-sm">Anchor Health</div>
