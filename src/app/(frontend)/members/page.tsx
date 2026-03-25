@@ -52,7 +52,7 @@ export default async function Members() {
 
   return (
     <>
-    <div className="relative mb-20 lg:h-140 md:h-120 h-85">
+    <div className="relative mb-10 lg:h-140 md:h-120 h-85">
       <div className="absolute inset-0 w-full object-cover">
         {banner?.url &&
         <img src={banner.url} alt={banner.alt || "Home banner"}

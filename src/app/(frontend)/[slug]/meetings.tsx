@@ -43,10 +43,10 @@ export default function Meetings() {
       <div  className="text-4xl mt-25 text-center text-[#2F4663] pl-10 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
        Next Meeting
       </div></div>
-      <div className="lg:flex  justify-center ">
+      <div className="flex justify-center ">
 <div className="lg:max-w-280  gap-5 lg:flex items-center py-8 ">
 
-  <div className="lg:w-1/3 lg:ml-0 w-[400px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
+  <div className="mb-2 lg:mb-0 lg:w-1/3 lg:ml-0 w-[400px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
     <h3 className="text-xl pb-4 font-semibold ">Next Meeting</h3>
     <div>Date</div>
     <div>Time</div>
@@ -59,7 +59,7 @@ export default function Meetings() {
 
   </div>
 
-  <div className=" lg:place-items-start md:w-[600px] lg:mr-0 w-[400px] text-center lg:text-left px-6 lg:px-0 lg:pl-8 lg:w-2/3 bg-white shadow shadow-md inset-shadow-sm rounded-lg py-5">
+  <div className=" lg:place-items-start lg::w-[600px] lg:mr-0 w-[400px] text-center lg:text-left px-6 lg:px-0 lg:pl-8 lg:w-2/3 bg-white shadow shadow-md inset-shadow-sm rounded-lg py-5">
   <div className="text-xl">{post.title}</div>
     <div className="lg:flex gap-5 w-full lg:justify-center mt-5 ">
       <div className="lg:w-1/3 pb-4 lg:pb-0">
