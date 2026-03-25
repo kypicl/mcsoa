@@ -23,6 +23,7 @@ export default async function LatestPosts() {
 
   return (
     <div key={post.title} className="p-10 text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg py-5 overflow-hidden bg-card hover:cursor-pointer">
+        <Link href={`/posts/${post.slug}`}>
     <div className="flex justify-center">
     <div className="relative w-[250px] aspect-[9/9] mb-4 place-self-center">
       {image && typeof image !== 'string' && (
@@ -41,11 +42,13 @@ export default async function LatestPosts() {
   })()}
   </p>
                     <p className="pt-5 text-end text-sm text-gray-500 hover:text-gray-900">
-                    <Link href={`/posts/${post.slug}`}>
+
                     continue reading...
-                    </Link>
+
                     </p>
+                    </Link>
     </div>
+
   )
 })}
 
