@@ -16,6 +16,10 @@ type Post = {
 
 export default function Meetings() {
   const [post, setPost ] = useState<Post | null>(null)
+  const [extensionVisible, setExtensionVisible] = useState(false)
+  const contentText = post?.content?.root?.children?.[0]?.children?.[0]?.text || ""
+  const contentTextExtention = post?.content?.root?.children[1]?.children[0]?.text || ""
+
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -27,13 +31,17 @@ export default function Meetings() {
     fetchPost()
   }, [])
 
+
+
+
+
   if (!post) return <div>Loading... </div>
 
     return (
-      <div className="lg:flex  justify-center">
-<div className="lg:max-w-[1100px]  m-10 gap-5 lg:flex items-center py-8 place-items-center">
+      <div className="lg:flex  justify-center ">
+<div className="lg:max-w-[1100px]  m-10 gap-5 lg:flex items-center py-8 ">
 
-  <div className="lg:w-1/3 lg:ml-0 w-[400px] h-[385px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
+  <div className="lg:w-1/3 lg:ml-0 w-[400px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
     <h3 className="text-xl pb-4 font-semibold underline decoration-[#ffb703] decoration-3 underline-offset-[13px]">Next Meeting</h3>
     <div>Date</div>
     <div>Time</div>
@@ -43,32 +51,42 @@ export default function Meetings() {
   (across from Mt Tam High School)
   </div>
     <div className="pt-4">Any questions please email us: info@marinsectiononaging.org</div>
+
   </div>
 
-  <div className="place-content-center place-items-center lg:place-items-start md:w-[600px] lg:mr-0 w-[400px] text-center lg:text-left px-6 lg:px-0 lg:pl-8 lg:w-2/3 lg:h-[350px] bg-white shadow shadow-md inset-shadow-sm rounded-lg py-5">
+  <div className=" lg:place-items-start md:w-[600px] lg:mr-0 w-[400px] text-center lg:text-left px-6 lg:px-0 lg:pl-8 lg:w-2/3 bg-white shadow shadow-md inset-shadow-sm rounded-lg py-5">
   <div className="text-xl">{post.title}</div>
-    <div className="lg:flex gap-5 w-full lg:justify-center mt-5 place-items-center ">
+    <div className="lg:flex gap-5 w-full lg:justify-center mt-5 ">
       <div className="lg:w-1/3 pb-4 lg:pb-0">
       {!post.content && (
         <div className="text-xl">Next Speaker coming soon</div>
       )}
             {post.heroImage && (
+              <div className="flex justify-center">
         <img
-          className="w-[220px] aspect-square rounded"
+          className="w-[220px] aspect-square rounded lg:mb-7"
           src={post.heroImage.url}
           alt={post.heroImage.alt || ""}
         />
+        </div>
       )}
+
       </div>
       <div className="lg:w-3/5 lg:mr-1">
+      {contentText && <div>{contentText}</div>}
 
-      {post.content && (
-        <div className="text-lg pb-5">{post.content.root.children[0].children[0].text}</div>
-      )}
-      {post.content && (
+      {/* {post.content && (
+        <div className="">{post.content?.root?.children[0]?.children[0]?.text}</div>
+      )} */}
+      {/* {post.content && (
         <div>{post.content.root.children[1].children[0].text}</div>
-      )}
-      <div className="text-end pr-5 text-gray-700 underline">read more</div>
+      )} */}
+
+<div className="mt-2">{extensionVisible ? contentTextExtention : ""}</div>
+      <button onClick={() => {
+    setExtensionVisible(prev => !prev)
+  }} className="relative z-50 mt-3 text-end pr-5 text-gray-700 underline ">{extensionVisible ? "read less" : "read more"}</button>
+
       </div>
     </div>
   </div>

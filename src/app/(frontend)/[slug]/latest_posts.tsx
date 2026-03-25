@@ -12,7 +12,7 @@ export default async function LatestPosts() {
     <div className="max-w-[1100px] w-full mx-auto px-6 my-20">
 
       {/* Header */}
-      <div className="text-4xl text-[#2F4663] pl-10 mb-8 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
+      <div  className="text-4xl text-[#2F4663] pl-10 mb-8 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
         Latest Posts
       </div>
 
@@ -22,7 +22,7 @@ export default async function LatestPosts() {
   const image = post.heroImage || post.meta?.image
 
   return (
-    <div key={post.title} className="text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg py-5 overflow-hidden bg-card hover:cursor-pointer">
+    <div key={post.title} className="p-10 text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg py-5 overflow-hidden bg-card hover:cursor-pointer">
     <div className="flex justify-center">
     <div className="relative w-[250px] aspect-[9/9] mb-4 place-self-center">
       {image && typeof image !== 'string' && (
@@ -33,7 +33,13 @@ export default async function LatestPosts() {
 
 
 
-                    <p>{JSON.stringify(post.content.root.children[0].children[0].text)}</p>
+          <p className="mt-2 text-sm text-gray-700">
+  {(() => {
+    const text = JSON.stringify(post.content?.root?.children?.[0]?.children?.[0]?.text) ?? 'No description';
+    const maxChars = 200; // <-- change this to your limit
+    return text.length > maxChars ? text.slice(0, maxChars) + '…' : text;
+  })()}
+  </p>
                     <p className="pt-5 text-end text-sm text-gray-500 hover:text-gray-900">
                     <Link href={`/posts/${post.slug}`}>
                     continue reading...
