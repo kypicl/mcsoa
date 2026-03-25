@@ -38,11 +38,16 @@ export default function Meetings() {
   if (!post) return <div>Loading... </div>
 
     return (
+      <>
+      <div className="max-w-280 w-full mx-auto px-6">
+      <div  className="text-4xl mt-25 text-center text-[#2F4663] pl-10 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
+       Next Meeting
+      </div></div>
       <div className="lg:flex  justify-center ">
-<div className="lg:max-w-[1100px]  m-10 gap-5 lg:flex items-center py-8 ">
+<div className="lg:max-w-280  gap-5 lg:flex items-center py-8 ">
 
   <div className="lg:w-1/3 lg:ml-0 w-[400px] bg-[#2F4663] text-white rounded-lg text-center  py-10 p-8">
-    <h3 className="text-xl pb-4 font-semibold underline decoration-[#ffb703] decoration-3 underline-offset-[13px]">Next Meeting</h3>
+    <h3 className="text-xl pb-4 font-semibold ">Next Meeting</h3>
     <div>Date</div>
     <div>Time</div>
     <div className="py-5 underline">In person only!</div>
@@ -92,6 +97,6 @@ export default function Meetings() {
   </div>
 
 </div>
-</div>
+</div></>
     )
 }

@@ -118,6 +118,41 @@ export default async function Page({ params: paramsPromise }: Args) {
 <Meetings />
 <LatestPosts />
 
+
+
+      {/* Header */}
+      <div  className="text-4xl mb-10 text-center text-[#2F4663] pl-10 mb-8 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
+       Membership
+      </div>
+
+          <div className="mb-30 py-10 bg-[#2F4663] text-white">
+            <div className="flex justify-center">
+              <div className="w-200 text-center md:text-start">
+            <h3 className="text-lg mb-5 font-bold ">What are the benefits of a membership to the MCSOA?</h3>
+            <p>• An abundance of networking with other services that may assist the
+     older adults you serve. Our members become connected to
+     resources in our community.</p>
+     <p>• Educational meetings covering a broad range of topics that are
+     of interest to members and the population we serve.</p>
+     <p>• A listing on the MCSOA website and the opportunity to list
+    your events on the MCSOA website.</p>
+     <p>• An opportunity for your company being highlighted to give a 5-minute
+    presentation and sponsor a gift for a member</p>
+     <p>• Attend the July and December meetings that are exclusively for
+    members</p>
+     <p>• Opportunities for sponsorship of meeting refreshments with your
+    personal “5 Minutes of Fame” for additional exposure
+    for your agency.
+</p>
+<Link href="/becomeamember">
+ <button className={"text-blue-950 bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>BECOME A MEMBER→ </button>
+</Link>
+</div>
+
+          </div>
+          </div>
+
+
     </>
   )
 }

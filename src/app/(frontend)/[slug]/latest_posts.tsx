@@ -9,7 +9,7 @@ export default async function LatestPosts() {
 
 
   return (
-    <div className="max-w-[1100px] w-full mx-auto px-6 my-20">
+    <div className="max-w-280 w-full mx-auto px-6 my-20">
 
       {/* Header */}
       <div  className="text-4xl text-[#2F4663] pl-10 mb-8 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">

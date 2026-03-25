@@ -25,19 +25,23 @@ export default async function ContactPage() {
     </div>
 
 
-      <div className="max-w-[1200px] w-full mx-auto px-6 mb-10 place-content-center text-center ">
+      <div className="max-w-[1200px] w-full mb-40 mx-auto px-6 place-content-center text-center ">
           <p>If you need to make edits to your submission please click <Link href="https://docs.google.com/forms/d/e/1FAIpQLScefidUcyfXGj5fDoW_-DmddJNgHxxnyXn7kVbU35Mg9EQzaQ/viewform?usp=header" className="underline hover:text-blue-500">here</Link></p>
 <Link href="https://docs.google.com/forms/d/e/1FAIpQLScefidUcyfXGj5fDoW_-DmddJNgHxxnyXn7kVbU35Mg9EQzaQ/viewform?usp=header">
   <button className={"text-blue-950  bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>BECOME A MEMBER → </button>
 </Link>
-        <div className="md:flex place-content-center mt-10 gap-8">
-          <div className=" w-[300px] rounded-lg bg-[#2F4663] text-xl text-white p-3 place-content-center">
+        <div className="md:flex justify-center  md:place-content-center md:mt-10 mt-20 gap-8 ">
+          <div className="flex justify-center">
+          <div className=" mb-20 md:mb-0 w-[300px] py-10 rounded-lg bg-[#2F4663] text-lg md:text-xl text-white p-3 place-content-center">
           <p>Membership is $80 annually.
           (Includes a free standard listing in our online directory displaying
           your business name, logo,
           primary contact name, and phone number, website link.)
           </p>
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLScefidUcyfXGj5fDoW_-DmddJNgHxxnyXn7kVbU35Mg9EQzaQ/viewform?usp=header">
            <button className={"text-blue-950  bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>SIGN UP→ </button>
+          </Link>
+          </div>
           </div>
 
           <div className="md:w-[700px] rounded inset-shadow-sm shadow-md p-5 text-start">
