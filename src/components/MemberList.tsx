@@ -59,21 +59,21 @@ export function MemberList({ members }: { members: Member[] }) {
     <div className="my-8 md:flex gap-10 justify-center">
       <div className="rounded-lg px-2 py-1.5 w-[300px] shadow-lg inset-shadow-sm ">
         <div className="flex rounded-lg">
-        <Image src={searchicon} alt="searchicon" className="h-[30px] w-[30px]"/>
-        <input className=" rounded-lg" value={nameFilter} onChange={e => setNameFilter(e.target.value)} />
+          <Image src={searchicon} alt="searchicon" className="h-[30px] w-[30px]"/>
+          <input className=" rounded-lg" value={nameFilter} onChange={e => setNameFilter(e.target.value)} />
+        </div>
       </div>
+      <div className="shadow-lg inset-shadow-sm rounded-lg mt-3 md:mt-0 py-3 px-3 w-[300px] md:w-auto lace-content-center justify-center flex">
+        <select onChange={e => setCategoryFilter(e.target.value)} name= "select category" id="category">
+          <option defaultValue="Filter by category" disabled>Filter by Category</option>
+          <option value= "">All Categories</option>
+          {categories.map((category) => (
+            <option value={category} key={category}>
+              {category}
+            </option>
+          ))}
+        </select>
       </div>
-            <div className="shadow-lg inset-shadow-sm rounded-lg mt-3 md:mt-0 py-3 px-3 w-[300px] md:w-auto lace-content-center justify-center flex">
-      <select onChange={e => setCategoryFilter(e.target.value)} name= "select category" id="category">
-        <option selected disabled>Filter by category</option>
-        <option value= "">All Categories</option>
-        {categories.map((category) => (
-          <option value={category}>
-            {category}
-          </option>
-        ))}
-      </select>
-    </div>
 
     </div>
 
@@ -93,7 +93,7 @@ export function MemberList({ members }: { members: Member[] }) {
         />
        )}
        </div>
-      </div>
+       </div>
       </div>
       <div className="lg:w-3/4 text-center">
       <p className="text-[#2F4663] font-semibold">{p.category}</p>
