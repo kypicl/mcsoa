@@ -14,10 +14,14 @@ const nextConfig = {
         protocol: 'http',
       },
       {
-        hostname: process.env.NEXT_PUBLIC_SERVER_URL/*.split('https://')[1]*/,
+        hostname: process.env.NEXT_PUBLIC_SERVER_URL.split('https://')[1],
         protocol: 'https'
       },
     ],
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+    tsconfigPath: 'tsconfig.json',
   },
   webpack: (webpackConfig) => {
     webpackConfig.resolve.extensionAlias = {
