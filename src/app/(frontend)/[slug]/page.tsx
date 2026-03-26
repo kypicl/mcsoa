@@ -50,8 +50,7 @@ type Media = {
     }
 
 export default async function Page({ params: paramsPromise }: Args) {
-  const bannerRes = await fetch("http://localhost:3000/api/media/1")
-  const banner: Media = await bannerRes.json()
+  const banner = await fetchMedia({mediaId:1})
   const logo = await fetchMedia({ mediaId:10 })
 
 
