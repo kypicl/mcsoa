@@ -1,0 +1,7 @@
+[build]
+builder = "railpack"
+buildCommand = "DB_SKIP=true npx next build"
+
+[deploy]
+releaseCommand = "npx payload migrate"
+startCommand = "npm run start"
