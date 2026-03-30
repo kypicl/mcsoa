@@ -1,6 +1,6 @@
 [build]
 builder = "railpack"
-buildCommand = "DB_SKIP=true npx next build"
+buildCommand = "npx next build"
 
 [deploy]
 releaseCommand = "npx payload migrate"

@@ -20,9 +20,11 @@ const nextConfig = {
       },
     ],
   },
-  db: process.env.DB_SKIP === 'true'
-    ? mockAdapter()
-    : sqliteAdapter({client: { url: process.env.DATABASE_URL}}),
+  db: sqliteAdapter({
+    client: { 
+      url: process.env.DATABASE_URL ?? 'file:/tmp/build-placeholder.db',
+    },
+  }),
   typescript: {
     ignoreBuildErrors: true,
     tsconfigPath: 'tsconfig.json',
