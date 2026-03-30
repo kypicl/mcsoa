@@ -20,11 +20,6 @@ const nextConfig = {
       },
     ],
   },
-  db: sqliteAdapter({
-    client: { 
-      url: process.env.DATABASE_URL ?? 'file:/tmp/build-placeholder.db',
-    },
-  }),
   typescript: {
     ignoreBuildErrors: true,
     tsconfigPath: 'tsconfig.json',
