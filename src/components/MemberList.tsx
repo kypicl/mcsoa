@@ -98,16 +98,16 @@ export function MemberList({ members }: { members: Member[] }) {
       <div className="lg:w-3/4 text-center">
       <p className="text-[#2F4663] font-semibold">{p.category}</p>
       <p className="font-bold text-2xl text-[#2F4663] underline decoration-[#ffb703] decoration-1 underline-offset-[10px]">{p.name}</p>
-      <div className="lg:flex gap-8 justify-center mt-3 ">
+      <div className="lg:flex gap-8 justify-center mt-5">
       <p className="lg:w-1/2 lg:text-end">👤 {p.contact_name}</p>
       <Link href={p.link} className="underline lg:w-1/2 lg:text-start">{p.link}</Link>
       </div>
-      <div className="lg:flex gap-8 mb-3 justify-center ">
-      <p className="lg:w-1/2 lg:text-end">📞 {p.phone}</p>
-      <p className="lg:w-1/2 lg:text-start">✉️ {p.email}</p>
+      <div className="lg:flex gap-8 mb-5 justify-center text-base/7.5">
+      <p className="lg:w-1/2 lg:text-end break-all">📞 {p.phone}</p>
+      <p className="lg:w-1/2 lg:text-start break-all">✉️ {p.email}</p>
       </div>
 
-      <p className="mb-3 text-sm ">{p.description}</p>
+      <p className="mb-5 text-sm ">{p.description}</p>
       <p className="">📍 {p.address}</p>
 
 

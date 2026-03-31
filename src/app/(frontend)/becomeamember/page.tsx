@@ -8,7 +8,7 @@ export default async function ContactPage() {
 
   return (
     <>
-    <div className="relative mb-10 lg:h-140 md:h-120 h-85">
+    <div className="relative mb-7.5 lg:h-140 md:h-120 h-85">
       <div className="absolute inset-0 w-full object-cover">
         {banner?.url &&
         <img src={banner.url} alt={banner.alt || "Home banner"}
@@ -25,14 +25,14 @@ export default async function ContactPage() {
     </div>
 
 
-      <div className="max-w-[1200px] w-full mb-40 mx-auto px-6 place-content-center text-center ">
+      <div className="max-w-[1200px] w-full mb-40 mx-auto px-5 place-content-center text-center ">
           <p>If you need to make edits to your submission please click <Link href="https://docs.google.com/forms/d/e/1FAIpQLScefidUcyfXGj5fDoW_-DmddJNgHxxnyXn7kVbU35Mg9EQzaQ/viewform?usp=header" className="underline hover:text-blue-500">here</Link></p>
 <Link href="https://docs.google.com/forms/d/e/1FAIpQLScefidUcyfXGj5fDoW_-DmddJNgHxxnyXn7kVbU35Mg9EQzaQ/viewform?usp=header">
   <button className={"text-blue-950  bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>BECOME A MEMBER → </button>
 </Link>
         <div className="md:flex justify-center  md:place-content-center md:mt-10 mt-20 gap-8 ">
           <div className="flex justify-center">
-          <div className=" mb-20 md:mb-0 w-[300px] py-10 rounded-lg bg-[#2F4663] text-lg md:text-xl text-white p-3 place-content-center">
+          <div className=" mb-20 md:mb-0 w-[300px] py-10 rounded-lg bg-[#2F4663] text-lg/7.5 md:text-xl/7.5 text-white p-3 place-content-center">
           <p>Membership is $80 annually.
           (Includes a free standard listing in our online directory displaying
           your business name, logo,
@@ -45,8 +45,9 @@ export default async function ContactPage() {
           </div>
 
           <div className="md:w-[700px] rounded inset-shadow-sm shadow-md p-5 text-start">
-            <h3 className="text-lg my-5 font-bold text-[#2F4663]">What are the benefits of a membership to the MCSOA?</h3>
-            <p>• An abundance of networking with other services that may assist the
+            <h3 className="text-lg my-2.5 font-bold text-[#2F4663]">What are the benefits of a membership to the MCSOA?</h3>
+            <div className="text-base/7.5">
+            <p >• An abundance of networking with other services that may assist the
      older adults you serve. Our members become connected to
      resources in our community.</p>
      <p>• Educational meetings covering a broad range of topics that are
@@ -61,6 +62,7 @@ export default async function ContactPage() {
     personal “5 Minutes of Fame” for additional exposure
     for your agency.
 </p>
+          </div>
           </div>
         </div>
 

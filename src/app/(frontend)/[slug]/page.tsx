@@ -79,7 +79,7 @@ export default async function Page({ params: paramsPromise }: Args) {
   return (
     <>
   {/* // banner picture */}
-    <div className="relative mb-20 lg:h-140 md:h-120 h-85">
+    <div className="relative lg:h-140 md:h-120 h-85">
       <div className="absolute inset-0 w-full object-cover">
         {banner &&
         <img src={banner.url} alt={banner.alt || "Home banner"}
@@ -97,7 +97,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 
 
   {/* description paragraph  */}
-    <div className="text-center max-w-[800px] mx-auto mt-10 mb-10 md:text-xl">
+    <div className="text-center text-base/7.5 max-w-[800px] mx-auto px-5 lg:px-0 mt-10 md:mt-15 mb-10 md:text-xl/7.5">
       <div>The Marin Section on Aging is a coalition of agencies, organizations and individuals
         concerned with the well-being of older persons. We are a network alliance advocating
         for and promoting the development, coordination and implementation of older adult services
@@ -120,14 +120,15 @@ export default async function Page({ params: paramsPromise }: Args) {
 
 
       {/* Header */}
-      <div  className="text-4xl mb-10 text-center text-[#2F4663] pl-10 mb-8 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
+      <div  className="text-4xl mb-10 text-center text-[#2F4663] pl-10 mb-7.5 underline decoration-[#ffb703] decoration-2 underline-offset-[15px]">
        Membership
       </div>
 
           <div className="mb-30 py-10 bg-[#2F4663] text-white">
             <div className="flex justify-center">
               <div className="w-200 text-center md:text-start">
-            <h3 className="text-lg mb-5 font-bold ">What are the benefits of a membership to the MCSOA?</h3>
+            <h3 className="text-lg mb-2.5 font-bold ">What are the benefits of a membership to the MCSOA?</h3>
+            <div className="text-base/7.5">
             <p>• An abundance of networking with other services that may assist the
      older adults you serve. Our members become connected to
      resources in our community.</p>
@@ -143,8 +144,9 @@ export default async function Page({ params: paramsPromise }: Args) {
     personal “5 Minutes of Fame” for additional exposure
     for your agency.
 </p>
+</div>
 <Link href="/becomeamember">
- <button className={"text-blue-950 bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>BECOME A MEMBER→ </button>
+ <button className={"text-blue-950 bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-2.5 mt-5 text-sm box-border rounded-full rounded-base shadow px-5 py-2.5 border-rounded"}>BECOME A MEMBER→ </button>
 </Link>
 </div>
 
