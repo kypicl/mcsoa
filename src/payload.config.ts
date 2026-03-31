@@ -60,7 +60,10 @@ export default buildConfig({
   editor: defaultLexical,
   db: sqliteAdapter({
     client: {
-      url: process.env.BUILD_DB_URL ?? process.env.DATABASE_URL ?? 'file:/tmp/placeholder.db',
+      url:
+        process.env.NEXT_PHASE === 'phase-production-build'
+          ? 'file:/tmp/payload.db'
+          : (process.env.DATABASE_URL ?? 'file:/data/mcsoa.db'),
     },
   }),
   collections: [Pages, Posts, Media, Categories, Users, Members],
