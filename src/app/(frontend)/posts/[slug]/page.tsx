@@ -43,6 +43,8 @@ type Args = {
   }>
 }
 
+export const dynamic = 'force-dynamic'
+
 export default async function Post({ params: paramsPromise }: Args) {
   const { isEnabled: draft } = await draftMode()
   const { slug = '' } = await paramsPromise
