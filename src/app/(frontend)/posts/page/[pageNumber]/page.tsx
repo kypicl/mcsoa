@@ -9,6 +9,8 @@ import React from 'react'
 import PageClient from './page.client'
 import { notFound } from 'next/navigation'
 
+export const dynamic = 'force-dynamic'
+export const dynamicParams = true
 export const revalidate = 600
 
 type Args = {
@@ -72,7 +74,7 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
 }
 
 export async function generateStaticParams() {
-  const payload = await getPayload({ config: configPromise })
+  /*const payload = await getPayload({ config: configPromise })
   const { totalDocs } = await payload.count({
     collection: 'posts',
     overrideAccess: false,
@@ -86,5 +88,6 @@ export async function generateStaticParams() {
     pages.push({ pageNumber: String(i) })
   }
 
-  return pages
+  return pages*/
+  return []
 }

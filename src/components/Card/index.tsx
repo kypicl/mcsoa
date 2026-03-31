@@ -8,7 +8,11 @@ import type { Post } from '@/payload-types'
 
 import { Media } from '@/components/Media'
 
+<<<<<<< HEAD
 export type CardPostData = Pick<Post, 'slug' | 'categories' | 'meta' | 'title' | 'heroImage' >
+=======
+export type CardPostData = Pick<Post, 'slug' | 'categories' | 'meta' | 'title' | 'heroImage' | 'content'>
+>>>>>>> d1fd2f1ffbd0ac5af8e321c3ee37eb17fec8f497
 
 export const Card: React.FC<{
   alignItems?: 'center'
@@ -88,7 +92,11 @@ export const Card: React.FC<{
         )}
         <p className="mt-2 text-sm text-gray-700">
   {(() => {
+<<<<<<< HEAD
     const text = doc.content?.root?.children?.[0]?.children?.[0]?.text[field as keyof string] ?? 'No description';
+=======
+    const text = (doc?.content?.root?.children as any)?.[0]?.children?.[0]?.text ?? 'No description';
+>>>>>>> d1fd2f1ffbd0ac5af8e321c3ee37eb17fec8f497
     const maxChars = 200; // <-- change this to your limit
     return text.length > maxChars ? text.slice(0, maxChars) + '…' : text;
   })()}

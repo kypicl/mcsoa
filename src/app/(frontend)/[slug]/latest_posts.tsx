@@ -36,7 +36,7 @@ export default async function LatestPosts() {
 
           <p className="mt-2 text-sm text-gray-700">
   {(() => {
-    const text = JSON.stringify(post.content?.root?.children?.[0]?.children?.[0]?.text) ?? 'No description';
+    const text = JSON.stringify((post.content?.root?.children as any[])?.[0]?.children?.[0]?.text) ?? 'No description';
     const maxChars = 200; // <-- change this to your limit
     return text.length > maxChars ? text.slice(0, maxChars) + '…' : text;
   })()}

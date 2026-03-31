@@ -39,8 +39,8 @@ export function MemberList({ members }: { members: Member[] }) {
   }, [])
 
 
-  var categories: string[] = [];
-  for (var i = 0; i < members.length; i++) {
+  const categories: string[] = [];
+  for (let i = 0; i < members.length; i++) {
     if (members[i].category && !categories.includes(members[i].category as string)) {
       categories.push(members[i].category as string);
     }
