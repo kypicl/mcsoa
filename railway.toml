@@ -1,6 +1,6 @@
 [build]
 builder = "railpack"
-buildCommand = "BUILD_DB_URL=file:/tmp/placeholder.db npx next build"
+buildCommand = "pnpm next build --experimental-build-mode generate-env"
 
 [deploy]
 releaseCommand = "npx payload migrate"
