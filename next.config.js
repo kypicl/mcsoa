@@ -34,6 +34,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   redirects,
+  staticPageGenerationTimeout: 0,
 }
 
 // Wrap it with Payload
