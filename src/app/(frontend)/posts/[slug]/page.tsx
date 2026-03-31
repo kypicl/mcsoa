@@ -15,8 +15,8 @@ import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 
-/*export async function generateStaticParams() {
-  const payload = await getPayload({ config: configPromise })
+export async function generateStaticParams() {
+  /*const payload = await getPayload({ config: configPromise })
   const posts = await payload.find({
     collection: 'posts',
     depth:1,
@@ -34,8 +34,9 @@ import { LivePreviewListener } from '@/components/LivePreviewListener'
     return { slug }
   })
 
-  return params
-}*/
+  return params*/
+  return []
+}
 
 type Args = {
   params: Promise<{
@@ -44,6 +45,7 @@ type Args = {
 }
 
 export const dynamic = 'force-dynamic'
+export const dynamicParams = true
 
 export default async function Post({ params: paramsPromise }: Args) {
   const { isEnabled: draft } = await draftMode()
