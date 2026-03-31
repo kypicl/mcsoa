@@ -15,7 +15,7 @@ import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 
-export async function generateStaticParams() {
+/*export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
   const posts = await payload.find({
     collection: 'posts',
@@ -35,7 +35,7 @@ export async function generateStaticParams() {
   })
 
   return params
-}
+}*/
 
 type Args = {
   params: Promise<{

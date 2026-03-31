@@ -72,7 +72,7 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
   }
 }
 
-export async function generateStaticParams() {
+/*export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
   const { totalDocs } = await payload.count({
     collection: 'posts',
@@ -88,4 +88,4 @@ export async function generateStaticParams() {
   }
 
   return pages
-}
+}*/
