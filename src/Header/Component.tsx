@@ -23,7 +23,7 @@ export function Header() {
   ]
 
 useEffect(() => {
-  fetch("http://localhost:3000/api/media/4")
+  fetch(process.env.NEXT_PUBLIC_SERVER_URL + "/api/media/10")
     .then(res => res.json())
     .then(data => setLogo(data));
 }, [])
