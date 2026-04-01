@@ -1,7 +1,6 @@
 [build]
 builder = "railpack"
-buildCommand = "pnpm next build --experimental-build-mode generate-env"
+buildCommand = "pnpm next build --experimental-build-mode compile && pnpm next build --experimental-build-mode generate-env"
 
 [deploy]
 releaseCommand = "npx payload migrate"
-startCommand = "npm run start"
