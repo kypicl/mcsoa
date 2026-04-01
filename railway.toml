@@ -4,4 +4,3 @@ buildCommand = "pnpm next build --experimental-build-mode compile && pnpm next b
 
 [deploy]
 releaseCommand = "npx payload migrate"
-startCommand = "sh -c "whoami && ls -la / && ls -la /data 2>/dev/null || echo '/data missing' && exit 1""
