@@ -19,7 +19,6 @@ const nextConfig = {
         protocol: 'https'
       },
     ],
-    dangerouslyAllowLocalIP: true,
   },
   typescript: {
     ignoreBuildErrors: true,
