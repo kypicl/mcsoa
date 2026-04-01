@@ -85,10 +85,10 @@ export function MemberList({ members }: { members: Member[] }) {
               <div className="lg:w-1/4">
               <div className="flex justify-center">
       <div className="place-self-center h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
-       {profilePicPlaceholder?.url && (
+       {p.logo?.url && (
         <img
-        src={profilePicPlaceholder.url}
-        alt={profilePicPlaceholder.alt || ""}
+        src={p.logo.url}
+        alt="logo"
         className="h-full w-full object-cover rounded-full"
         />
        )}

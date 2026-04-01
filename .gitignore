@@ -6,9 +6,10 @@ node_modules
 .next
 .vercel
 mcsoa.db
+public/media
 
 # Payload default media upload directory
-# public/media/cd 
+# public/media/cd
 
 public/robots.txt
 public/sitemap*.xml

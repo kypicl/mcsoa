@@ -8,6 +8,7 @@ export default async function LatestPosts() {
 
 
 
+
   return (
     <div className="w-full bg-[#3A58AA]/5 px-7.5 py-20 mt-20">
       <div className="max-w-280 mx-auto">
@@ -21,6 +22,7 @@ export default async function LatestPosts() {
       <div className="md:grid md:grid-cols-2 gap-10 ">
         {posts.map((post) => {
   const image = post.heroImage
+  console.log("Image: ", image)
 
   return (
     <div key={post.title} className="mb-5 md:mb-0 bg-white p-10 text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg pb-5 pt-10 overflow-hidden bg-card hover:cursor-pointer">
