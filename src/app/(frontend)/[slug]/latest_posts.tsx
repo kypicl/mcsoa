@@ -20,7 +20,7 @@ export default async function LatestPosts() {
       {/* Posts */}
       <div className="md:grid md:grid-cols-2 gap-10 ">
         {posts.map((post) => {
-  const image = post.heroImage || post.meta?.image
+  const image = post.heroImage
 
   return (
     <div key={post.title} className="mb-5 md:mb-0 bg-white p-10 text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg pb-5 pt-10 overflow-hidden bg-card hover:cursor-pointer">

@@ -15,10 +15,11 @@ const nextConfig = {
         protocol: 'http',
       },
       {
-        hostname: process.env.NEXT_PUBLIC_SERVER_URL/*.split('https://')[1]*/,
+        hostname: process.env.NEXT_PUBLIC_SERVER_URL,
         protocol: 'https'
       },
     ],
+    dangerouslyAllowLocalIP: true,
   },
   typescript: {
     ignoreBuildErrors: true,
