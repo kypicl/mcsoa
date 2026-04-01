@@ -97,7 +97,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 
 
   {/* description paragraph  */}
-    <div className="bg-[#3A58AA]/5 p-5 w-full rounded-lg text-center text-base/7.5 mx-auto px-5 lg:px-0 py-20 md:text-xl/7.5">
+    <div className="bg-[#3A58AA]/5 p-5 w-full rounded-lg text-center text-base/7.5 mx-auto px-5 lg:px-0 py-15  md:py-20 md:text-xl/7.5">
     <div className="max-w-[800px] mx-auto rounded-lg">
       <div className="">The Marin Section on Aging is a coalition of agencies, organizations and individuals
         concerned with the well-being of older persons. We are a network alliance advocating
