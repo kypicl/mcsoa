@@ -23,7 +23,7 @@ export function Header() {
   ]
 
 useEffect(() => {
-  fetch(process.env.NEXT_PUBLIC_SERVER_URL + "/api/media/10")
+  fetch(process.env.NEXT_PUBLIC_SERVER_URL + "/api/media/4")
     .then(res => res.json())
     .then(data => setLogo(data));
 }, [])
