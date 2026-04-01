@@ -80,7 +80,7 @@ export default async function Page({ params: paramsPromise }: Args) {
     <>
   {/* // banner picture */}
     <div className="relative lg:h-140 md:h-120 h-85">
-      <div className="absolute inset-0 w-full object-cover">
+      <div className="absolute inset-0 w-full  object-cover">
         {banner &&
         <img src={banner.url} alt={banner.alt || "Home banner"}
         className="h-full w-full object-cover" />}
@@ -88,7 +88,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 
           <div className="flex justify-center ">
         {logo?.url && (
-          <img className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-60 md:h-70 lg:h-100 w-auto z-10" src={logo.url} alt={logo.alt || "Logo"} />
+          <img className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-100 w-auto z-10" src={logo.url} alt={logo.alt || "Logo"} />
         )}
         </div>
         </div>
@@ -97,8 +97,9 @@ export default async function Page({ params: paramsPromise }: Args) {
 
 
   {/* description paragraph  */}
-    <div className="text-center text-base/7.5 max-w-[800px] mx-auto px-5 lg:px-0 mt-10 md:mt-15 mb-10 md:text-xl/7.5">
-      <div>The Marin Section on Aging is a coalition of agencies, organizations and individuals
+    <div className="bg-[#3A58AA]/5 p-5 w-full rounded-lg text-center text-base/7.5 mx-auto px-5 lg:px-0 py-20 md:text-xl/7.5">
+    <div className="max-w-[800px] mx-auto rounded-lg">
+      <div className="">The Marin Section on Aging is a coalition of agencies, organizations and individuals
         concerned with the well-being of older persons. We are a network alliance advocating
         for and promoting the development, coordination and implementation of older adult services
         in Marin.  We hold morning meetings the 3rd Thursday of each month featuring speakers and member
@@ -110,7 +111,7 @@ export default async function Page({ params: paramsPromise }: Args) {
         <Link href="/becomeamember">
         <button className={"bg-gray-100 border border-gray-200 hover:bg-gray-200 mt-5 text-sm  rounded-full rounded-base shadow px-4 py-2.5 "}>BECOME A MEMBER</button>
         </Link>
-    </div>
+    </div></div>
 
 {/* next meeting */}
 
@@ -120,13 +121,13 @@ export default async function Page({ params: paramsPromise }: Args) {
 
 
       {/* Header */}
-      <div  className="text-4xl mb-10 text-center text-[#2F4663] pl-10 mb-7.5 underline decoration-[#ffb703] decoration-2 underline-offset-[15px]">
+      <div  className="text-4xl mt-20 mb-10 text-center text-[#2F4663] md:pl-10 mb-7.5 underline decoration-[#ffb703] decoration-2 underline-offset-[15px]">
        Membership
       </div>
 
-          <div className="mb-30 py-10 bg-[#2F4663] text-white">
+          <div className="mb-30 py-10 bg-[#2F4663] text-white px-2.5">
             <div className="flex justify-center">
-              <div className="w-200 text-center md:text-start">
+              <div className="w-200 text-start">
             <h3 className="text-lg mb-2.5 font-bold ">What are the benefits of a membership to the MCSOA?</h3>
             <div className="text-base/7.5">
             <p>• An abundance of networking with other services that may assist the

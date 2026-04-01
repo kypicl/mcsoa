@@ -30,7 +30,7 @@ useEffect(() => {
 
   return (
     <>
-    <div className="border flex justify-between mx-auto py-4 pl-2 pr-4 md:pl-4 text-blue-950 h-[80px] text-sm md:text-base">
+    <div className="border flex justify-between mx-auto py-4 pl-1 md:pr-5 md:pl-5 text-blue-950 h-[80px] text-sm md:text-base">
       <div className="flex items-center space-x-5" id="navbar-default">
     <button >
         <Link href="/">

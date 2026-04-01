@@ -9,7 +9,7 @@ export default async function AboutUsPage() {
 
   return     (
     <>
-    <div className="relative mb-20 lg:h-140 md:h-120 h-85">
+    <div className="relative mb-15 md:mb-20 lg:h-140 md:h-120 h-85">
       <div className="absolute inset-0 w-full object-cover">
        {media?.url && (
         <img
@@ -28,7 +28,7 @@ export default async function AboutUsPage() {
 
 
             <div className="max-w-[1200px] w-full mx-auto px-5 mb-10 place-content-center">
-        <div className="text-center text-4xl text-[#2F4663]  mb-7.5 underline decoration-[#ffb703] decoration-2 underline-offset-[15px]">
+        <div className="text-center text-3xl md:text-4xl/15 text-[#2F4663]  mb-7.5 underline decoration-[#ffb703] decoration-2 underline-offset-[15px]">
         Meet the Committee
       </div>
             <div className="text-center max-w-[800px] mx-auto text-xl/7.5 mb-10">

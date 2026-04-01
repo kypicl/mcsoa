@@ -9,10 +9,11 @@ export default async function LatestPosts() {
 
 
   return (
-    <div className="max-w-280 w-full mx-auto px-6 my-20">
+    <div className="w-full bg-[#3A58AA]/5 px-7.5 py-20 mt-20">
+      <div className="max-w-280 mx-auto">
 
       {/* Header */}
-      <div  className="text-4xl text-[#2F4663] pl-10 mb-8 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
+      <div  className="text-4xl text-[#2F4663] text-center md:text-start md:pl-10 mb-10 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
         Latest Posts
       </div>
 
@@ -22,7 +23,7 @@ export default async function LatestPosts() {
   const image = post.heroImage || post.meta?.image
 
   return (
-    <div key={post.title} className="p-10 text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg py-5 overflow-hidden bg-card hover:cursor-pointer">
+    <div key={post.title} className="mb-5 md:mb-0 bg-white p-10 text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg pb-5 pt-10 overflow-hidden bg-card hover:cursor-pointer">
         <Link href={`/posts/${post.slug}`}>
     <div className="flex justify-center">
     <div className="relative w-[250px] aspect-[9/9] mb-4 place-self-center">
@@ -56,6 +57,7 @@ export default async function LatestPosts() {
     <Link href="/blog">
       <div className="text-end pt-5 underline text-gray-700">read more posts here</div>
     </Link>
+    </div>
     </div>
   )
 }
