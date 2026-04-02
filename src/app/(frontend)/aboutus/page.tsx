@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default async function AboutUsPage() {
   const media = await fetchMedia({ mediaId:1 })
   const aboutUsLogo = await fetchMedia({ mediaId:11})
-  const profilepicplaceholder = await fetchMedia({ mediaId:8})
+  const profilepicplaceholder = await fetchMedia({ mediaId:11})
 
   return     (
     <>
