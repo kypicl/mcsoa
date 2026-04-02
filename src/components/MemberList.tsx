@@ -4,7 +4,6 @@ import { Media } from '@/payload-types'
 import { useEffect, useState } from 'react'
 import searchicon from "./Media/search_icon.png"
 import Image from 'next/image'
-import { fetchMedia } from '@/app/actions';
 import Link from 'next/link'
 
 type Member = {
