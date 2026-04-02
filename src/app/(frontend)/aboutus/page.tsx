@@ -5,7 +5,15 @@ import Link from 'next/link';
 export default async function AboutUsPage() {
   const media = await fetchMedia({ mediaId:1 })
   const aboutUsLogo = await fetchMedia({ mediaId:11})
-  const profilepicplaceholder = await fetchMedia({ mediaId:11})
+  const terriphoto = await fetchMedia({ mediaId:97 })
+  const lorenaphoto = await fetchMedia({ mediaId:99 })
+  const williamphoto = await fetchMedia({ mediaId:102 })
+  const johnellphoto = await fetchMedia({ mediaId:106 })
+  const libbyphoto = await fetchMedia({ mediaId:108 })
+  const carlyphoto = await fetchMedia({ mediaId:110 })
+  const deohnahphoto = await fetchMedia({ mediaId:113 })
+
+
 
   return     (
     <>
@@ -45,10 +53,10 @@ export default async function AboutUsPage() {
             <div className="mb-10 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
-       {profilepicplaceholder?.url && (
+       {terriphoto?.url && (
         <img
-        src={profilepicplaceholder.url}
-        alt={profilepicplaceholder.alt || ""}
+        src={terriphoto.url}
+        alt={terriphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -64,10 +72,10 @@ export default async function AboutUsPage() {
             <div className="mb-5 md:mb-0 text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
-       {profilepicplaceholder?.url && (
+       {lorenaphoto?.url && (
         <img
-        src={profilepicplaceholder.url}
-        alt={profilepicplaceholder.alt || ""}
+        src={lorenaphoto.url}
+        alt={lorenaphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -84,10 +92,10 @@ export default async function AboutUsPage() {
             <div className="h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
-       {profilepicplaceholder?.url && (
+       {williamphoto?.url && (
         <img
-        src={profilepicplaceholder.url}
-        alt={profilepicplaceholder.alt || ""}
+        src={williamphoto.url}
+        alt={williamphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -109,10 +117,10 @@ export default async function AboutUsPage() {
             <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
-       {profilepicplaceholder?.url && (
+       {johnellphoto?.url && (
         <img
-        src={profilepicplaceholder.url}
-        alt={profilepicplaceholder.alt || ""}
+        src={johnellphoto.url}
+        alt={johnellphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -128,10 +136,10 @@ export default async function AboutUsPage() {
             <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
-       {profilepicplaceholder?.url && (
+       {libbyphoto?.url && (
         <img
-        src={profilepicplaceholder.url}
-        alt={profilepicplaceholder.alt || ""}
+        src={libbyphoto.url}
+        alt={libbyphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -147,10 +155,10 @@ export default async function AboutUsPage() {
             <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
-       {profilepicplaceholder?.url && (
+       {carlyphoto?.url && (
         <img
-        src={profilepicplaceholder.url}
-        alt={profilepicplaceholder.alt || ""}
+        src={carlyphoto.url}
+        alt={carlyphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -166,10 +174,10 @@ export default async function AboutUsPage() {
             <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
-       {profilepicplaceholder?.url && (
+       {deohnahphoto?.url && (
         <img
-        src={profilepicplaceholder.url}
-        alt={profilepicplaceholder.alt || ""}
+        src={deohnahphoto.url}
+        alt={deohnahphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
         />
        )}
