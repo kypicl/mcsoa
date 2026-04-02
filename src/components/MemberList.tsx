@@ -24,19 +24,11 @@ type Member = {
 export function MemberList({ members }: { members: Member[] }) {
   const [nameFilter, setNameFilter] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('')
-  const [profilePicPlaceholder, setProfilePicPlaceholder] = useState<any>(null)
+
 
   const filtered = members.filter(m =>
     m.name.toLowerCase().includes(nameFilter.toLowerCase()) && m.category.toLowerCase().includes(categoryFilter.toLowerCase())
   )
-    useEffect(() => {
-    async function loadPic() {
-      const pic = await fetchMedia({ mediaId: 8 })
-      setProfilePicPlaceholder(pic)
-    }
-
-    loadPic()
-  }, [])
 
 
   const categories: string[] = [];
@@ -84,12 +76,12 @@ export function MemberList({ members }: { members: Member[] }) {
             <div className="lg:flex w-full place-self-center">
               <div className="lg:w-1/4">
               <div className="flex justify-center">
-      <div className="place-self-center h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
+      <div className="place-self-center">
        {p.logo?.url && (
         <img
         src={p.logo.url}
         alt="logo"
-        className="h-full w-full object-cover rounded-full"
+        className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px] object-cover"
         />
        )}
        </div>
