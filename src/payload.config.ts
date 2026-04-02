@@ -1,4 +1,5 @@
 import { sqliteAdapter } from '@payloadcms/db-sqlite'
+import { s3Storage } from '@payloadcms/storage-s3'
 import sharp from 'sharp'
 import path from 'path'
 import { buildConfig, PayloadRequest } from 'payload'
@@ -111,7 +112,22 @@ export default buildConfig({
   collections: [Pages, Posts, Media, Categories, Users, Members],
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
-  plugins,
+  plugins: [
+    s3Storage({
+      collections: {
+        media: true,
+      },
+      bucket : process.env.AWS_S3_BUCKET_NAME || '',
+      config: {
+        credentials: {
+          accessKeyId: process.env.AWS_ACCESS_KEY_ID || '',
+          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || '',
+        },
+        region: process.env.AWS_DEFAULT_REGION,
+        forcePathStyle: true,
+      }
+    })
+  ],
   secret: process.env.PAYLOAD_SECRET,
   sharp,
   typescript: {
