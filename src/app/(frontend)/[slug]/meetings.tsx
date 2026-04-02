@@ -62,7 +62,7 @@ export default function Meetings() {
   </div>
 
   <div className=" lg:place-items-start  lg:mr-0 mx-2.5 md:w-[400px] text-left lg:text-left px-7.5 lg:px-0 lg:pl-7.5 lg:w-2/3 bg-white shadow shadow-md inset-shadow-sm rounded-lg py-5">
-  <div className="text-xl">{post.title}</div>
+  <div className="text-xl font-bold">Next Speaker: {post.title}</div>
     <div className="lg:flex gap-5 w-full lg:justify-center mt-5 ">
       <div className="lg:w-1/3 pb-4 lg:pb-0">
       {!post.content && (
@@ -71,7 +71,7 @@ export default function Meetings() {
             {post.heroImage && (
               <div className="flex justify-center">
         <img
-          className="w-[220px] aspect-square rounded lg:mb-7.5"
+          className="w-[220px] aspect-square object-contain rounded lg:mb-7.5"
           src={post.heroImage.url}
           alt={post.heroImage.alt || ""}
         />
