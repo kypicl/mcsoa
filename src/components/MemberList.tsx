@@ -80,7 +80,7 @@ export function MemberList({ members }: { members: Member[] }) {
         <img
         src={p.logo.url}
         alt="logo"
-        className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px] object-cover"
+        className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px] object-contain"
         />
        )}
        </div>
