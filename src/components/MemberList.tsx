@@ -4,7 +4,6 @@ import { Media } from '@/payload-types'
 import { useEffect, useState } from 'react'
 import searchicon from "./Media/search_icon.png"
 import Image from 'next/image'
-import { fetchMedia } from '@/app/actions';
 import Link from 'next/link'
 
 type Member = {
@@ -49,14 +48,14 @@ export function MemberList({ members }: { members: Member[] }) {
         BECOME A MEMBER→
         </button></Link></div>
     <div className="my-8 md:flex gap-10 justify-center">
-      <div className="rounded-lg px-2 py-1.5 w-[300px] shadow-lg inset-shadow-sm ">
-        <div className="flex rounded-lg">
+      <div className="rounded-lg w-[300px] shadow-lg inset-shadow-sm ">
+        <div className="flex rounded-lg px-4 py-2">
           <Image src={searchicon} alt="searchicon" className="h-[30px] w-[30px]"/>
-          <input className=" rounded-lg" value={nameFilter} onChange={e => setNameFilter(e.target.value)} />
+          <input className="rounded-lg text-xl py-1 pl-2" value={nameFilter} onChange={e => setNameFilter(e.target.value)} />
         </div>
       </div>
-      <div className="shadow-lg inset-shadow-sm rounded-lg mt-3 md:mt-0 py-3 px-3 w-[300px] md:w-auto lace-content-center justify-center flex">
-        <select onChange={e => setCategoryFilter(e.target.value)} name= "select category" id="category">
+      <div className="shadow-lg inset-shadow-sm rounded-lg mt-3 md:mt-0 px-4 py-3  w-[300px] md:w-auto lace-content-center justify-center flex">
+        <select className="text-xl" onChange={e => setCategoryFilter(e.target.value)} name= "select category" id="category">
           <option defaultValue="Filter by category" disabled>Filter by Category</option>
           <option value= "">All Categories</option>
           {categories.map((category) => (
@@ -81,7 +80,7 @@ export function MemberList({ members }: { members: Member[] }) {
         <img
         src={p.logo.url}
         alt="logo"
-        className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px] object-cover"
+        className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px] object-contain"
         />
        )}
        </div>

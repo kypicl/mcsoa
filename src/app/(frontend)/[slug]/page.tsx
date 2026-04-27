@@ -79,25 +79,21 @@ export default async function Page({ params: paramsPromise }: Args) {
   return (
     <>
   {/* // banner picture */}
-    <div className="relative lg:h-140 md:h-120 h-85">
-      <div className="absolute inset-0 w-full  object-cover">
-        {banner &&
-        <img src={banner.url} alt={banner.alt || "Home banner"}
-        className="h-full w-full object-cover" />}
+    <div className="relative h-85 bg-[#2F4663]">
 
 
           <div className="flex justify-center ">
         {logo?.url && (
-          <img className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-100 w-auto z-10" src={logo.url} alt={logo.alt || "Logo"} />
+          <img className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 w-auto z-10" src={logo.url} alt={logo.alt || "Logo"} />
         )}
         </div>
-        </div>
+
 
     </div>
 
 
   {/* description paragraph  */}
-    <div className="bg-[#3A58AA]/5 p-5 w-full rounded-lg text-center text-base/7.5 mx-auto px-5 lg:px-0 py-15  md:py-20 md:text-xl/7.5">
+    <div className="bg-[#2F4663] text-white p-5 w-full text-center text-base/7.5 mx-auto px-5 lg:px-0 py-15  md:py-20 md:text-xl/7.5">
     <div className="max-w-[800px] mx-auto rounded-lg">
       <div className="">The Marin Section on Aging is a coalition of agencies, organizations and individuals
         concerned with the well-being of older persons. We are a network alliance advocating
@@ -109,7 +105,7 @@ export default async function Page({ params: paramsPromise }: Args) {
         <button className={"text-blue-950  bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>MEMBERS DIRECTORY → </button>
         </Link>
         <Link href="/becomeamember">
-        <button className={"bg-gray-100 border border-gray-200 hover:bg-gray-200 mt-5 text-sm  rounded-full rounded-base shadow px-4 py-2.5 "}>BECOME A MEMBER</button>
+        <button className={"bg-gray-100 border border-gray-200 hover:bg-gray-200 mt-5 text-sm text-[#2F4663] rounded-full rounded-base shadow px-4 py-2.5 "}>BECOME A MEMBER</button>
         </Link>
     </div></div>
 
