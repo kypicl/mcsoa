@@ -23,11 +23,13 @@ export default async function BlogPage() {
         </div>
 
     </div>
-
-
+<div className="max-w-[1200px] h-100 w-full flex justify-center mx-auto  px-6 my-10">
+  <iframe className = "h-full w-full" src="https://docs.google.com/forms/d/e/1FAIpQLSeRaos2qw6RUX7gF61aj0tH2QUzglDdsmclGziFCNh9Tp2R5A/viewform?embedded=true">Loading…</iframe>
+</div>
   <div className="max-w-[1200px] w-full mx-auto  px-6 my-20">
-      <Posts/>
-    </div>
-    </>
+    Past Speakers
+    <Posts/>
+  </div>
+  </>
   )
 }
