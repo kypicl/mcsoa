@@ -15,7 +15,7 @@ export default async function LatestPosts() {
 
       {/* Header */}
       <div  className="text-4xl text-[#2F4663] text-center md:text-start md:pl-10 mb-10 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
-        Latest Posts
+        Past Speakers
       </div>
 
       {/* Posts */}
