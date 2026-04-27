@@ -102,7 +102,7 @@ export default async function Page({ params: paramsPromise }: Args) {
         networking opportunities.
         </div>
         <Link href="/members">
-        <button className={"text-blue-950  bg-[#ffb703] text-[#272757] hover:bg-[#272757] hover:text-[#ffb703] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>MEMBERS DIRECTORY → </button>
+        <button className={"text-blue-950  bg-[#ffb703] text-[#2F4663] hover:grayscale-[50%] mr-3 mt-5 text-sm box-border rounded-full rounded-base shadow px-4 py-2.5 border-rounded"}>MEMBERS DIRECTORY → </button>
         </Link>
         <Link href="/becomeamember">
         <button className={"bg-gray-100 border border-gray-200 hover:bg-gray-200 mt-5 text-sm text-[#2F4663] rounded-full rounded-base shadow px-4 py-2.5 "}>BECOME A MEMBER</button>
