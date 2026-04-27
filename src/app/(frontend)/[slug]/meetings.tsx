@@ -51,12 +51,11 @@ export default function Meetings() {
     <div className="text-base/7.5 font-bold">
     <div>Thursday March 19 , 2026</div>
     <div>10am-11:30am</div>
-    <div className="py-5 underline">In person only!</div>
-    <div>The Redwoods Senior Community <br/>
+    <div className="py-4">The Redwoods Senior Community <br/>
     40 Camino Alto, Mill Valley  <br/>
   (across from Mt Tam High School)
   </div>
-    <div className="pt-4">Any questions please email us: info@marinsectiononaging.org</div>
+    <div>Any questions please email us: <a href="mailto:info@marinsectiononaging.org">info@marinsectiononaging.org</a></div>
     </div>
 
   </div>
