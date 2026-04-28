@@ -45,7 +45,7 @@ export const PostHero: React.FC<{
           {heroImage && typeof heroImage !== 'string' && (
           <Media imgClassName="h-[400px] w-[400px]" resource={heroImage} />
           )}
-
+          
           <div className="flex flex-col md:flex-row gap-4 md:gap-16">
             {hasAuthors && (
               <div className="flex flex-col gap-4">

@@ -27,26 +27,6 @@ export default async function Members() {
         logo: logo as unknown as {id: number; url: string; updatedAt: string; createdAt: string}
     }))
 
-    /*
-    useEffect(() => {
-        fetch("http://localhost:3000/api/members")
-        .then(res => res.json())
-        .then(data => setMembers(data.docs));
-    }, [])
-
-    useEffect(() => {
-        fetch("http://localhost:3000/api/media/3")
-        .then(res => res.json())
-        .then(data => setBanner(data));
-    }, [])
-    */
-  /*var categories: string[] = [];
-  for (var i = 0; i < members.length; i++) {
-    if (members[i].category && !categories.includes(members[i].category as string)) {
-      categories.push(members[i].category as string);
-    }
-  }*/
-
   return (
     <>
     <div className="relative mb-7.5 lg:h-140 md:h-120 h-85 bg-[#2F4663]">

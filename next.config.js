@@ -12,11 +12,12 @@ const nextConfig = {
     remotePatterns: [
       {
         hostname: 'localhost',
-        protocol: 'http',
+        protocol: 'http'
       },
       {
+        protocol: 'https',
         hostname: process.env.NEXT_PUBLIC_SERVER_URL,
-        protocol: 'https'
+        pathname: '/api/media/**'
       },
     ],
   },
