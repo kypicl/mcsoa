@@ -16,8 +16,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: process.env.NEXT_PUBLIC_SERVER_URL,
-        pathname: '/api/media/**'
+        hostname: process.env.NEXT_PUBLIC_SERVER_URL
       },
     ],
   },
