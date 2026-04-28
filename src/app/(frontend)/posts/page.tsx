@@ -16,7 +16,7 @@ export default async function Page() {
 
 const posts = await payload.find({
   collection: 'posts',
-  depth: 1,         // populates media fields
+  depth: 2,         // populates media fields
   limit: 12,
   overrideAccess: false,
   select: {
@@ -61,6 +61,6 @@ const posts = await payload.find({
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Payload Website Template Posts`,
+    title: `MCSOA Past Speakers`,
   }
 }
