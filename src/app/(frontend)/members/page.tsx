@@ -5,7 +5,6 @@ import { MemberList } from '@/components/MemberList'
 import { fetchMedia } from '@/app/actions';
 
 export default async function Members() {
-    const banner = await fetchMedia({ mediaId:1 })
     const logo = await fetchMedia({ mediaId:2})
 
     const payload = await getPayload({ config})
@@ -50,11 +49,8 @@ export default async function Members() {
 
   return (
     <>
-    <div className="relative mb-7.5 lg:h-140 md:h-120 h-85">
+    <div className="relative mb-7.5 lg:h-140 md:h-120 h-85 bg-[#2F4663]">
       <div className="absolute inset-0 w-full object-cover">
-        {banner?.url &&
-        <img src={banner.url} alt={banner.alt || "Home banner"}
-        className="h-full w-full object-cover" />}
 
 
           <div className="flex justify-center ">
