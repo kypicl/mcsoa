@@ -3,7 +3,6 @@ import { fetchMedia } from '@/app/actions';
 import Link from 'next/link';
 
 export default async function AboutUsPage() {
-  const media = await fetchMedia({ mediaId:1 })
   const aboutUsLogo = await fetchMedia({ mediaId:11})
   const terriphoto = await fetchMedia({ mediaId:97 })
   const lorenaphoto = await fetchMedia({ mediaId:99 })
@@ -17,15 +16,8 @@ export default async function AboutUsPage() {
 
   return     (
     <>
-    <div className="relative mb-15 md:mb-20 lg:h-140 md:h-120 h-85">
+    <div className="relative mb-15 md:mb-20 lg:h-140 md:h-120 h-85 bg-[#2F4663]">
       <div className="absolute inset-0 w-full object-cover">
-       {media?.url && (
-        <img
-        src={media.url}
-        alt={media.alt || ""}
-        className="h-full w-full object-cover"
-        />
-       )}
           <div className="flex justify-center">
         {aboutUsLogo?.url && (
           <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-80 w-auto z-10" src={aboutUsLogo.url} alt={aboutUsLogo.alt || "About Us Logo"} />
