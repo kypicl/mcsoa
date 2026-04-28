@@ -2,10 +2,6 @@ import { withPayload } from '@payloadcms/next/withPayload'
 import redirects from './redirects.js'
 import { sqliteAdapter } from '@payloadcms/db-sqlite'
 
-const NEXT_PUBLIC_SERVER_URL = process.env.RAILWAY_PUBLIC_DOMAIN
-  ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}`
-  : undefined || process.env.__NEXT_PRIVATE_ORIGIN || 'http://localhost:3000'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -16,7 +12,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: NEXT_PUBLIC_SERVER_URL
+        hostname: process.env.RAILWAY_PUBLIC_DOMAIN
       },
     ],
   },
