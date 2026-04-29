@@ -10,6 +10,7 @@ import Link from 'next/link'
 import Meetings from './meetings'
 import LatestPosts from './latest_posts'
 import { fetchMedia } from '@/app/actions'
+import { Media } from '@/components/Media'
 
 import { generateMeta } from '@/utilities/generateMeta'
 
@@ -50,10 +51,7 @@ type Media = {
     }
 
 export default async function Page({ params: paramsPromise }: Args) {
-  const banner = await fetchMedia({mediaId:1})
   const logo = await fetchMedia({ mediaId:10 })
-
-
 
   const { slug = 'home' } = await paramsPromise
   // Decode to support slugs with special characters
@@ -81,11 +79,7 @@ export default async function Page({ params: paramsPromise }: Args) {
   {/* // banner picture */}
 <div className="h-100 bg-[#2F4663] flex items-center justify-center">
   {logo?.url && (
-<img
-  className="h-60 md:h-70 w-auto "
-  src={logo.url}
-  alt={logo.alt || "Logo"}
-/>
+<Media imgClassName="h-60 md:h-70 w-auto" resource = {logo} />
   )}
 </div>
 
