@@ -22,7 +22,7 @@ export default async function AboutUsPage() {
       <div className="absolute inset-0 w-full object-cover">
           <div className="flex justify-center">
         {aboutUsLogo?.url && (
-          <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-80 w-auto z-10" src={aboutUsLogo.url} alt={aboutUsLogo.alt || "About Us Logo"} />
+          <Media imgClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-80 w-auto z-10" resource={aboutUsLogo}/>
         )}
         </div>
         </div>
