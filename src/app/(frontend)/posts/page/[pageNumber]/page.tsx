@@ -34,7 +34,7 @@ export default async function Page({ params: paramsPromise }: Args) {
     page: sanitizedPageNumber,
     overrideAccess: false,
   })
-  console.log("Posts: ", posts)
+  //console.log("Posts: ", posts)
 
   return (
     <div className="pt-24 pb-24">

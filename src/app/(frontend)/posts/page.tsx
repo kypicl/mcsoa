@@ -27,7 +27,7 @@ const posts = await payload.find({
     content: true,   // <-- include content explicitly
   },
 })
-  console.log(posts)
+  //console.log(posts)
 
   return (
     <div className="pb-24 ">

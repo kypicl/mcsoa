@@ -12,7 +12,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: process.env.RAILWAY_PUBLIC_DOMAIN
+        hostname: process.env.RAILWAY_PUBLIC_DOMAIN || 'localhost'
       },
     ],
   },

@@ -1,6 +1,8 @@
 import React from 'react'
 import { fetchMedia } from '@/app/actions';
 import Link from 'next/link';
+import Image from 'next/image'
+import { Media } from '@/components/Media'
 
 export default async function AboutUsPage() {
   const aboutUsLogo = await fetchMedia({ mediaId:11})
@@ -46,11 +48,13 @@ export default async function AboutUsPage() {
       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {terriphoto?.url && (
-        <img
+        /*<img
         src={terriphoto.url}
         alt={terriphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
-        />
+        />*/
+        //<Image src={terriphoto?.url} alt={terriphoto.alt || ''} />
+        <Media resource={terriphoto} />
        )}
       </div>
       </div>

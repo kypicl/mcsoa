@@ -24,7 +24,7 @@ export const Card: React.FC<{
   const { slug, categories, meta, title, heroImage } = doc || {}
   const { description, image: metaImage } = meta || {}
   const displayImage = metaImage || heroImage
-  console.log(typeof heroImage, heroImage)
+  //console.log(typeof heroImage, heroImage)
   
 
 

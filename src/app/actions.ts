@@ -27,9 +27,14 @@ export async function fetchPosts({ page = 1, limit=2, sort = '-createdAt'}) {
 
 export async function fetchMedia({mediaId=1}) {
     const payload = await getPayload({config: buildConfig})
-    const media = await payload.findByID({
-        collection: 'media',
-        id: mediaId,
-    })
-    return media
+    try{
+        const media = await payload.findByID({
+            collection: 'media',
+            id: mediaId,
+        })
+        return media
+    } catch (err: any) {
+        if (err?.status === 404) return null
+        throw err
+    }
 }
