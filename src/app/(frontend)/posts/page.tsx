@@ -14,7 +14,7 @@ export const revalidate = 600
 export default async function Page() {
   const payload = await getPayload({ config: configPromise })
 
-const posts = await payload.find({
+const results = await payload.find({
   collection: 'posts',
   depth: 2,         // populates media fields
   limit: 12,
@@ -27,6 +27,7 @@ const posts = await payload.find({
     content: true,   // <-- include content explicitly
   },
 })
+const posts = results.docs.slice(1)
   //console.log(posts)
 
   return (
