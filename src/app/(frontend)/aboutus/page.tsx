@@ -63,7 +63,12 @@ export default async function AboutUsPage() {
       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {lorenaphoto?.url && (
-        <Media imgClassName="h-full w-full object-cover rounded-full" resource={lorenaphoto} />
+        <Image
+        src={lorenaphoto.url}
+        alt={lorenaphoto.alt || ""}
+        className="h-full w-full object-cover rounded-full"
+        />
+        
        )}
       </div>
       </div>
@@ -79,7 +84,11 @@ export default async function AboutUsPage() {
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {williamphoto?.url && (
-        <Media imgClassName="h-full w-full object-cover rounded-full" resource={williamphoto} />
+        <img
+        src={williamphoto.url}
+        alt={williamphoto.alt || ""}
+        className="h-full w-full object-cover rounded-full"
+        />
        )}
       </div>
       </div>
@@ -100,7 +109,11 @@ export default async function AboutUsPage() {
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {johnellphoto?.url && (
-        <Media imgClassName="h-full w-full object-cover rounded-full" resource={johnellphoto} />
+        <img
+        src={johnellphoto.url}
+        alt={johnellphoto.alt || ""}
+        className="h-full w-full object-cover rounded-full"
+        />
        )}
       </div></div>
           <div className="text-xl font-bold pt-2.5 text-[#272757]">Johnell Davidson</div>
@@ -115,7 +128,11 @@ export default async function AboutUsPage() {
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {libbyphoto?.url && (
-        <Media imgClassName="h-full w-full object-cover rounded-full" resource={libbyphoto} />
+        <img
+        src={libbyphoto.url}
+        alt={libbyphoto.alt || ""}
+        className="h-full w-full object-cover rounded-full"
+        />
        )}
       </div></div>
           <div className="text-xl font-bold pt-2.5 text-[#272757]">Libby Wood</div>
@@ -130,7 +147,11 @@ export default async function AboutUsPage() {
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {carlyphoto?.url && (
-        <Media imgClassName="h-full w-full object-cover rounded-full" resource={carlyphoto} />
+        <img
+        src={carlyphoto.url}
+        alt={carlyphoto.alt || ""}
+        className="h-full w-full object-cover rounded-full"
+        />
        )}
       </div></div>
           <div className="text-xl font-bold pt-2.5 text-[#272757]">Carly Migdal</div>
@@ -145,7 +166,11 @@ export default async function AboutUsPage() {
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {deohnahphoto?.url && (
-        <Media imgClassName="h-full w-full object-cover rounded-full" resource={deohnahphoto} />
+        <img
+        src={deohnahphoto.url}
+        alt={deohnahphoto.alt || ""}
+        className="h-full w-full object-cover rounded-full"
+        />
        )}
       </div></div>
           <div className="text-xl font-bold pt-2.5 text-[#272757]">Deonah Salari</div>
