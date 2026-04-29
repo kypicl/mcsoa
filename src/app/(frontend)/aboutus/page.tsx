@@ -54,7 +54,7 @@ export default async function AboutUsPage() {
         className="h-full w-full object-cover rounded-full"
         />*/
         //<Image src={terriphoto?.url} alt={terriphoto.alt || ''} />
-        <Media resource={terriphoto} />
+        <Media imgClassName="h-full w-full object-cover rounded-full" resource={terriphoto} />
        )}
       </div>
       </div>
