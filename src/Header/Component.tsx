@@ -1,10 +1,9 @@
-
+"use client"
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { Media } from '@/components/Media'
-import { fetchMedia } from '@/app/actions'
+import Image from 'next/image'
 
 type Media = {
         id: number
@@ -12,10 +11,9 @@ type Media = {
         alt?: string
     }
 
-export default async function Header() {
-  const logo = await fetchMedia({ mediaId:4 })
+export function Header() {
   const pathname = usePathname()
-  //const [logo, setLogo] = useState<Media | null>(null)
+  const [logo, setLogo] = useState<Media | null>(null)
 
   const links = [
     { href: "/", label: "HOME" },
@@ -25,11 +23,11 @@ export default async function Header() {
     { href: "/becomeamember", label: "BECOME A MEMBER", className: "hidden sm:block" },
   ]
 
-/*useEffect(() => {
+useEffect(() => {
   fetch(process.env.NEXT_PUBLIC_SERVER_URL + "/api/media/4")
     .then(res => res.json())
     .then(data => setLogo(data));
-}, [])*/
+}, [])
 
   return (
     <>
@@ -38,8 +36,12 @@ export default async function Header() {
     <button >
         <Link href="/">
         {logo && (
-        <Media imgClassName= "h-[60px] w-[60px]" resource = {logo} />
-        )}
+  <Image
+    src={logo.url}
+    alt={logo.alt || "Members banner"}
+    className="h-[60px] w-[60px]"
+  />
+)}
         </Link>
       </button>
           </div>
