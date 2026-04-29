@@ -84,7 +84,7 @@ export default async function AboutUsPage() {
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {williamphoto?.url && (
-        <img
+        <Image
         src={williamphoto.url}
         alt={williamphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
@@ -109,7 +109,7 @@ export default async function AboutUsPage() {
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {johnellphoto?.url && (
-        <img
+        <Image
         src={johnellphoto.url}
         alt={johnellphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
@@ -128,7 +128,7 @@ export default async function AboutUsPage() {
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {libbyphoto?.url && (
-        <img
+        <Image
         src={libbyphoto.url}
         alt={libbyphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
@@ -166,7 +166,7 @@ export default async function AboutUsPage() {
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
        {deohnahphoto?.url && (
-        <img
+        <Image
         src={deohnahphoto.url}
         alt={deohnahphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
