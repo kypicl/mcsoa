@@ -26,6 +26,11 @@ const posts = await payload.find({
     heroImage: true,
     content: true,   // <-- include content explicitly
   },
+  where: {
+    id: {
+      not_equals: 1
+    }
+  }
 })
   //console.log(posts)
 
