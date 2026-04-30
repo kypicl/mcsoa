@@ -27,8 +27,8 @@ const posts = await payload.find({
     content: true,   // <-- include content explicitly
   },
   where: {
-    id: {
-      not_equals: 1
+    slug: {
+      not_equals: 'next_speaker'
     }
   }
 })
