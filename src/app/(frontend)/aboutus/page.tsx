@@ -77,7 +77,8 @@ export default async function AboutUsPage() {
           <div className="text-md pb-2.5">Sponsor Coordinator</div>
           <div className="text-sm">Suncrest Hospice</div>
           <div className="text-sm underline"><Link href="https://www.suncresthospicecare.com/">suncresthospicecare.com/</Link></div>
-          <div className="text-sm">LGarbarino@suncrestcare.com</div>
+          <div className="text-sm">LGarbarino@suncresthospicecare.com</div>
+          <div className="text-sm">(415) 949-8354</div>
         </div>
 
             <div className="h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
@@ -118,9 +119,8 @@ export default async function AboutUsPage() {
       </div></div>
           <div className="text-xl font-bold pt-2.5 text-[#272757]">Johnell Davidson</div>
           <div className="text-md pb-2.5">Speaker Seeker</div>
-
           <div className="text-sm ">Neighborly Senior Placement</div>
-          <div className="text-sm underline"><Link href="https://neighborlyseniorplacement.com/">neighborlyseniorplacement.com</Link></div>
+          <div className="text-sm">Johnell@neighborlyseniorplacement.com</div>
           <div className="text-sm">(415) 294-0505</div>
         </div>
 

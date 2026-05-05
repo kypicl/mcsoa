@@ -19,7 +19,7 @@ export async function Footer() {
  <div>Marin County Section on Aging</div>
  <p>1000 Fourth Street #440 San Rafael, CA 94901</p>
  <p className="text-sm mt-2">©Copyright 2026 Marin County Section on Aging</p>
- <p className="text-sm">Designed by <Link className="underline" href="">Sunset Cliffs Web Solutions</Link></p>
+ <p className="text-sm">Designed by <Link className="underline" href="https://www.sunsetcliffsweb.com/">Sunset Cliffs Web Design</Link></p>
     </footer>
   )
 }
