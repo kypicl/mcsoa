@@ -7,13 +7,13 @@ export default async function ContactPage() {
 
   return (
     <>
-    <div className="relative mb-7.5 lg:h-140 md:h-120 h-85 bg-[#2F4663]">
+    <div className="relative mb-7.5 lg:h-100 md:h-90 h-85 bg-[#2F4663]">
       <div className="absolute inset-0 w-full object-cover">
 
 
           <div className="flex justify-center ">
         {logo?.url && (
-          <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-80 w-auto z-10" src={logo.url} alt={logo.alt || "Logo"} />
+          <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-60 lg:h-60 w-auto z-10" src={logo.url} alt={logo.alt || "Logo"} />
         )}
         </div>
         </div>
