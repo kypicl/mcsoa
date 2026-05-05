@@ -24,7 +24,7 @@ export const Members: CollectionConfig = {
     {
         name: 'category',
         type: 'select',
-        options: [ 'Care Management', 'Coaching', 'Community Resource', 'Durable Medical Equipment', 'End of Life', 'Estate Planning', 'Funeral Service', 'Home Care', 'Home Safety', 'Hospice', 'Information and Referral', 'Legal & Financial', 'Medical and Medical Supplies', 'Mental Health Services', 'Moving and Organizing', 'Placement Services', 'Real Estate', 'Reverse Mortgage', 'Senior Housing', 'Wellness and Fitness' ]
+        options: [ 'Care Management', 'Coaching', 'Community Resource', 'Durable Medical Equipment', 'End of Life', 'Estate Planning', 'Funeral Service', 'Home Care', 'Home Safety', 'Hospice', 'Information and Referral', 'Legal & Financial', 'Medical and Medical Supplies', 'Mental Health Services', 'Moving and Organizing', 'Placement Services', 'Real Estate', 'Reverse Mortgage', 'Senior Living Communities', 'Wellness and Fitness' ]
     },
     {
         name: 'contact_name',
