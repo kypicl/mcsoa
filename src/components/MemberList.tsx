@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import searchicon from "./Media/search_icon.png"
 import Image from 'next/image'
 import Link from 'next/link'
+import { a } from 'node_modules/vitest/dist/chunks/suite.d.BJWk38HB'
 
 type Member = {
   id: number
@@ -36,6 +37,7 @@ export function MemberList({ members }: { members: Member[] }) {
       categories.push(members[i].category as string);
     }
   }
+  categories.sort((a,b) => a.localeCompare(b))
 
   return (
     <div className="mx-10 max-w-[900px] lg:mx-auto ">
