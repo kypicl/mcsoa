@@ -18,11 +18,11 @@ export default async function AboutUsPage() {
 
   return     (
     <>
-    <div className="relative mb-15 md:mb-20 lg:h-140 md:h-120 h-85 bg-[#2F4663]">
+    <div className="relative mb-7.5 lg:h-100 md:h-90 h-85 bg-[#2F4663]">
       <div className="absolute inset-0 w-full object-cover">
           <div className="flex justify-center">
         {aboutUsLogo?.url && (
-          <Media imgClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-70 lg:h-80 w-auto z-10" resource={aboutUsLogo}/>
+          <Media imgClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 md:h-60 lg:h-60 w-auto z-10" resource={aboutUsLogo}/>
         )}
         </div>
         </div>
@@ -68,7 +68,7 @@ export default async function AboutUsPage() {
         alt={lorenaphoto.alt || ""}
         className="h-full w-full object-cover rounded-full"
         />
-        
+
        )}
       </div>
       </div>

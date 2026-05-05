@@ -116,22 +116,14 @@ export default async function Page({ params: paramsPromise }: Args) {
           <div className="mb-30 py-10 bg-[#2F4663] text-white px-2.5">
             <div className="flex justify-center">
               <div className="w-200 text-start">
-            <h3 className="text-lg mb-2.5 font-bold ">What are the benefits of a membership to the MCSOA?</h3>
+            <h3 className="text-lg mb-2.5 font-bold ">Monthly meetings are open to the public. However, we strongly encourage and appreciate your membership. After attending up to three meetings we ask that you consider officially joining MCSOA.  Here's what you get for your membership:</h3>
             <div className="text-base/7.5">
-            <p>• An abundance of networking with other services that may assist the
-     older adults you serve. Our members become connected to
-     resources in our community.</p>
-     <p>• Educational meetings covering a broad range of topics that are
-     of interest to members and the population we serve.</p>
-     <p>• A listing on the MCSOA website and the opportunity to list
-    your events on the MCSOA website.</p>
-     <p>• An opportunity for your company being highlighted to give a 5-minute
-    presentation and sponsor a gift for a member</p>
-     <p>• Attend the July and December meetings that are exclusively for
-    members</p>
-     <p>• Opportunities for sponsorship of meeting refreshments with your
-    personal “5 Minutes of Fame” for additional exposure
-    for your agency.
+            <p>• Regular networking opportunities with other senior services</p>
+     <p>• Educational presentations covering a broad range of relevant topics</p>
+     <p>• A listing in the MCSOA directory</p>
+     <p>• The opportunity to list events on the MCSOA website</p>
+     <p>• Participation in members-only meetings</p>
+     <p>• The opportunity to give 5-minute spotlight presentation
 </p>
 </div>
 <Link href="/becomeamember">
