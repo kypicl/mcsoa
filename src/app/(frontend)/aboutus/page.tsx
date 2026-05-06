@@ -77,7 +77,7 @@ export default async function AboutUsPage() {
       </div>
       </div>
           <div className="text-xl font-bold pt-2.5 text-[#272757]">Lorena Garbarino</div>
-          <div className="text-md break px-2.5">5-Minute Company Highlight/Gift Sponsor Coordinator</div>
+          <div className="text-md break pb-2.5 px-2.5">5-Minute Company Highlight/Gift Sponsor Coordinator</div>
           <div className="text-sm px-2.5">Suncrest Hospice</div>
           <div className="text-sm break-all px-2.5 underline"><Link href="https://www.suncresthospicecare.com/">suncresthospicecare.com/</Link></div>
           <div className="text-sm break-all px-2.5">(415) 949-8354</div>
