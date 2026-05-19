@@ -47,9 +47,9 @@ export default function Meetings() {
 <div className="lg:max-w-280 mx-2.5 gap-5 lg:flex items-center my-10 ">
 
   <div className="mb-5 lg:mb-0 lg:w-1/3 lg:ml-0 mx-2.5 md:w-[400px] bg-[#2F4663] text-white rounded-lg text-center  py-10">
-    <h3 className="text-xl pb-4 font-semibold ">March Meeting</h3>
+    <h3 className="text-xl pb-4 font-semibold ">May Meeting</h3>
     <div className="text-base/7.5 font-bold">
-    <div>Thursday March 19 , 2026</div>
+    <div>Thursday May 21, 2026</div>
     <div>10am-11:30am</div>
     <div className="py-4">The Redwoods Senior Community <br/>
     40 Camino Alto, Mill Valley  <br/>

@@ -832,6 +832,7 @@ export interface Member {
   category?:
     | (
         | 'Care Management'
+        | 'Care Support Programs and Systems'
         | 'Coaching'
         | 'Community Resource'
         | 'Durable Medical Equipment'
