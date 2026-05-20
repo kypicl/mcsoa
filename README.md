@@ -1,1 +1,1 @@
-This is the codebase for the Marin County Section on Aging website and member directory.
+This is the codebase for the Marin County Section on Aging website and member directory. The Marin Section on Aging is a coalition of agencies, organizations and individuals concerned with the well-being of older persons. We are a network alliance advocating for and promoting the development, coordination and implementation of older adult services in Marin. We hold morning meetings the 3rd Thursday of each month featuring speakers and member networking opportunities.
