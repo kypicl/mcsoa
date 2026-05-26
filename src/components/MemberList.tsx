@@ -56,7 +56,7 @@ export function MemberList({ members }: { members: Member[] }) {
           <input className="rounded-lg text-xl py-1 pl-2" value={nameFilter} onChange={e => setNameFilter(e.target.value)} />
         </div>
       </div>
-      <div className="shadow-lg inset-shadow-sm rounded-lg mt-3 md:mt-0 px-4 py-3  w-[300px] md:w-auto lace-content-center justify-center flex">
+      {/*<div className="shadow-lg inset-shadow-sm rounded-lg mt-3 md:mt-0 px-4 py-3  w-[300px] md:w-auto lace-content-center justify-center flex">
         <select className="text-xl" onChange={e => setCategoryFilter(e.target.value)} name= "select category" id="category">
           <option defaultValue="Filter by category" disabled>Filter by Category</option>
           <option value= "">All Categories</option>
@@ -66,7 +66,7 @@ export function MemberList({ members }: { members: Member[] }) {
             </option>
           ))}
         </select>
-      </div>
+      </div>*/}
 
     </div>
 
@@ -89,7 +89,7 @@ export function MemberList({ members }: { members: Member[] }) {
        </div>
       </div>
       <div className="lg:w-3/4 md:text-center">
-      <p className="text-[#2F4663] font-semibold text-center">{p.category}</p>
+      {/*<p className="text-[#2F4663] font-semibold text-center">{p.category}</p>*/}
       <p className=" text-center font-bold text-xl/10 text-[#2F4663] underline decoration-[#ffb703] decoration-1 underline-offset-[10px]">{p.name}</p>
       <div className="lg:flex gap-8 justify-center mt-5">
       <p className="lg:w-1/2 lg:text-end">👤 {p.contact_name}</p>
