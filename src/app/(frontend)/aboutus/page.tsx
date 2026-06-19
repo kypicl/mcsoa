@@ -79,9 +79,9 @@ export default async function AboutUsPage() {
           <div className="text-xl font-bold pt-2.5 text-[#272757]">Lorena Garbarino</div>
           <div className="text-md break pb-2.5 px-2.5">5-Minute Company Highlight/Gift Sponsor Coordinator</div>
           <div className="text-sm px-2.5">Suncrest Hospice</div>
-          <div className="text-sm break-all px-2.5 underline"><Link href="https://www.suncresthospicecare.com/">suncresthospicecare.com/</Link></div>
+          <div className="text-sm break-all px-2.5 underline"><Link href="https://www.suncrestcare.com/">suncrestcare.com</Link></div>
           <div className="text-sm break-all px-2.5">(415) 949-8354</div>
-          <div className="text-sm break-all px-2.5">LGarbarino@suncresthospicecare.com</div>
+          <div className="text-sm break-all px-2.5">LGarbarino@suncrestcare.com</div>
         </div>
 
             <div className="h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
