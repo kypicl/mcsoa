@@ -11,6 +11,8 @@ import Meetings from './meetings'
 import LatestPosts from './latest_posts'
 import { fetchMedia } from '@/app/actions'
 import { Media } from '@/components/Media'
+import MCSOAlogo from '../MCSOA Logo.png'
+import Image from 'next/image'
 
 import { generateMeta } from '@/utilities/generateMeta'
 
@@ -52,7 +54,7 @@ type Media = {
 
 export default async function Page({ params: paramsPromise }: Args) {
   const logo = await fetchMedia({ mediaId:10 })
-
+  // const logo = MCSOAlogo
   const { slug = 'home' } = await paramsPromise
   // Decode to support slugs with special characters
   const decodedSlug = decodeURIComponent(slug)
@@ -77,15 +79,20 @@ export default async function Page({ params: paramsPromise }: Args) {
   return (
     <>
   {/* // banner picture */}
-<div className="h-100 bg-[#2F4663] flex items-center justify-center">
+<div className="h-70 md:h-80 bg-white flex items-center justify-center">
+    {/* <Image
+      src={logo}
+      alt="Logo"
+      className="h-50 md:h-65 w-auto"
+    /> */}
   {logo?.url && (
-<Media imgClassName="h-60 md:h-70 w-auto" resource = {logo} />
+<Media imgClassName="h-50 md:h-65 w-auto" resource = {logo} />
   )}
 </div>
 
 
   {/* description paragraph  */}
-    <div className="bg-[#2F4663]  text-white w-full text-center text-base/7.5 mx-auto px-5 lg:px-0 pb-20 md:text-xl/7.5">
+    <div className="bg-[#2F4663]  text-white w-full text-center text-base/7.5 mx-auto px-5 lg:px-0 py-10 md:text-xl/7.5">
     <div className="max-w-[800px] mx-auto rounded-lg">
       <div className="">The Marin Section on Aging is a coalition of agencies, organizations and individuals
         concerned with the well-being of older persons. We are a network alliance advocating
