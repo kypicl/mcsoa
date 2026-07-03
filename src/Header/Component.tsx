@@ -10,7 +10,7 @@ async function getLogo() {
   try {
     const media = await payload.findByID({
       collection: 'media',
-      id: 14,
+      id: 4,
     })
     return media
   } catch {
