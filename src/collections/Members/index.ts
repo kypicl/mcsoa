@@ -36,6 +36,12 @@ export const Members: CollectionConfig = {
       required: true,
     },
     {
+      name: 'enabled',
+      type: 'checkbox',
+      defaultValue: 'true',
+      required: true,
+    },
+    {
         name: 'logo',
         type: 'upload',
         relationTo: 'media',
