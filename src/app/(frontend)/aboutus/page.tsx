@@ -10,7 +10,7 @@ export default async function AboutUsPage() {
   const lorenaphoto = await fetchMedia({ mediaId:99 })
   const williamphoto = await fetchMedia({ mediaId:102 })
   const johnellphoto = await fetchMedia({ mediaId:106 })
-  const libbyphoto = await fetchMedia({ mediaId:108 })
+  const libbyphoto = await fetchMedia({ mediaId:148 })
   const carlyphoto = await fetchMedia({ mediaId:110 })
   const deohnahphoto = await fetchMedia({ mediaId:113 })
 
