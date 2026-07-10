@@ -13,6 +13,7 @@ type Member = {
   category: string
   contact_name: string
   description: string
+  enabled: boolean
   link: string
   email: string
   address: string
@@ -27,7 +28,7 @@ export function MemberList({ members }: { members: Member[] }) {
 
 
   const filtered = members.filter(m =>
-    m.name.toLowerCase().includes(nameFilter.toLowerCase()) && m.category.toLowerCase().includes(categoryFilter.toLowerCase())
+    m.name.toLowerCase().includes(nameFilter.toLowerCase()) && m.category.toLowerCase().includes(categoryFilter.toLowerCase()) && m.enabled
   )
 
 
