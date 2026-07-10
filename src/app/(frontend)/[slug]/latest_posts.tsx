@@ -22,15 +22,18 @@ export default async function LatestPosts() {
       <div className="md:grid md:grid-cols-2 gap-10 ">
         {posts.map((post) => {
   const image = post.heroImage
-  console.log("Image: ", image)
+  const isMediaObject = typeof image === 'object' && image !== null && 'width' in image && 'height' in image
+  const aspectRatio = isMediaObject && typeof image.width === 'number' && typeof image.height === 'number'
+    ? `${image.width}/${image.height}`
+    : '16/9'
 
   return (
     <div key={post.title} className="mb-5 md:mb-0 bg-white p-10 text-center shadow-lg inset-shadow-sm hover:shadow-xl rounded-lg pb-5 pt-10 overflow-hidden bg-card hover:cursor-pointer">
         <Link href={`/posts/${post.slug}`}>
     <div className="flex justify-center">
-    <div className="relative w-[250px] aspect-[9/9] mb-4 place-self-center">
+    <div className="relative mb-4 w-full max-w-[250px] overflow-hidden rounded-lg" style={{ aspectRatio }}>
       {image && typeof image !== 'string' && (
-        <Media fill resource={image} className="object-cover rounded-lg" />
+        <Media fill resource={image} imgClassName="object-contain" className="h-full w-full" />
       )}
     </div></div>
     <p className="text-xl font-bold">{post.title}</p>

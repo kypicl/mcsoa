@@ -24,10 +24,10 @@ export const Card: React.FC<{
   const { slug, categories, meta, title, heroImage } = doc || {}
   const { description, image: metaImage } = meta || {}
   const displayImage = metaImage || heroImage
-  //console.log(typeof heroImage, heroImage)
-  
-
-
+  const isMediaObject = typeof displayImage === 'object' && displayImage !== null && 'width' in displayImage && 'height' in displayImage
+  const aspectRatio = isMediaObject && typeof displayImage.width === 'number' && typeof displayImage.height === 'number'
+    ? `${displayImage.width}/${displayImage.height}`
+    : '16/9'
 
   const hasCategories = categories && Array.isArray(categories) && categories.length > 0
   const titleToUse = titleFromProps || title
@@ -45,11 +45,11 @@ export const Card: React.FC<{
       ref={card.ref}
     >
       <div className="flex justify-center p-5">
-<div className="relative place-self-center rounded-lg w-[250px] aspect-[9/9]">
+<div className="relative place-self-center overflow-hidden rounded-lg w-[250px]" style={{ aspectRatio }}>
   {!displayImage && <div>No image</div>}
 
   {displayImage && typeof displayImage !== 'string' && (
-    <Media fill resource={displayImage} className="object-cover  " />
+    <Media fill resource={displayImage} imgClassName="object-contain" className="h-full w-full" />
   )}
 </div></div>
       <div className="p-5">
