@@ -14,12 +14,13 @@ export default async function Members() {
         limit: 100,
     })
 
-    const members = docs.map(({id, name, category, contact_name, description, link, email, address, phone, logo}) => ({
+    const members = docs.map(({id, name, category, contact_name, description, enabled, link, email, address, phone, logo}) => ({
         id,
         name,
         category: category as string,
         contact_name: contact_name ?? '',
         description,
+        enabled,
         link,
         email,
         address: address ?? '',
