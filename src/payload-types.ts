@@ -856,6 +856,7 @@ export interface Member {
     | null;
   contact_name?: string | null;
   description: string;
+  enabled: boolean;
   logo?: (number | null) | Media;
   link: string;
   email: string;
@@ -1479,6 +1480,7 @@ export interface MembersSelect<T extends boolean = true> {
   category?: T;
   contact_name?: T;
   description?: T;
+  enabled?: T;
   logo?: T;
   link?: T;
   email?: T;
