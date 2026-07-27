@@ -27,10 +27,10 @@ export default async function HappyHour () {
   )}
 </div>
         </div>
-        <div >
-            <p className="text-xl mb-2.5">Sponsors:</p>
+        <div className="bg-white rounded-lg p-5 mr-5 mt-5" >
+            <p className="text-xl mb-2.5 font-bold">Sponsors:</p>
             <p className="mb-5">Thank you to this month's sponsor: {nextSponsor}</p>
-            <p className="text-xl mb-2.5">Previous Sponsors: </p>
+            <p className="text-xl mb-2.5 font-bold">Previous Sponsors: </p>
             <p className="mb-5">{pastSponsors}</p>
       </div></div>
         </div></div>
