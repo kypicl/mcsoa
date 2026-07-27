@@ -10,11 +10,11 @@ export default async function LatestPosts() {
 
 
   return (
-    <div className="w-full bg-[#3A58AA]/5 px-7.5 py-20 mt-20">
+    <div className="w-full  px-7.5 py-20 ">
       <div className="max-w-280 mx-auto">
 
       {/* Header */}
-      <div  className="text-4xl text-[#2F4663] text-center md:text-start md:pl-10 mb-10 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
+      <div  className="text-4xl text-[#2F4663] text-center md:pl-10 mb-10 underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
         Past Speakers
       </div>
 

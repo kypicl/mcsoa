@@ -11,6 +11,7 @@ import Meetings from './meetings'
 import LatestPosts from './latest_posts'
 import { fetchMedia } from '@/app/actions'
 import { Media } from '@/components/Media'
+import HappyHour from './happy_hour'
 import MCSOAlogo from '../MCSOA Logo.png'
 import Image from 'next/image'
 
@@ -111,6 +112,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 {/* next meeting */}
 
 <Meetings />
+<HappyHour />
 <LatestPosts />
 
 

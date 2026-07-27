@@ -9,7 +9,7 @@ import type { Footer } from '@/payload-types'
 export async function Footer() {
 
   return (
-    <footer className="py-5  border-t border-border border-[#272757]/80 text-center text-[#272757]/80 ">
+    <footer className="py-5 text-center text-[#272757]/80 ">
       <div className="flex justify-center">
         <Link href="https://www.facebook.com/Marincountysectiononaging/">
         <Image className="h-9 w-9" src={fbicon} alt="fbicon"/>
