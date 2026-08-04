@@ -18,12 +18,19 @@ export default async function HappyHour () {
         <div className="flex justify-center">
 <div className="relative h-[400px] w-[300px] ">
   {flyer?.url && (
-    <Image
-      src={flyer.url}
-      alt={flyer.alt || ""}
-      fill
-      className="object-cover"
-    />
+    <a
+      href={flyer.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Open ${flyer.alt || 'happy hour flyer'} in a new tab`}
+    >
+      <Image
+        src={flyer.url}
+        alt={flyer.alt || ""}
+        fill
+        className="object-cover"
+      />
+    </a>
   )}
 </div>
         </div>

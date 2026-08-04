@@ -26,19 +26,24 @@ export function MemberList({ members }: { members: Member[] }) {
   const [nameFilter, setNameFilter] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('')
 
+  const normalizedNameFilter = nameFilter.toLowerCase()
+  const normalizedCategoryFilter = categoryFilter.toLowerCase()
 
-  const filtered = members.filter(m =>
-    m.name.toLowerCase().includes(nameFilter.toLowerCase()) && m.category.toLowerCase().includes(categoryFilter.toLowerCase()) && m.enabled
-  )
+  const filtered = members.filter((m) => {
+    const normalizedName = (m.name ?? '').toLowerCase()
+    const normalizedCategory = (m.category ?? '').toLowerCase()
 
+    return normalizedName.includes(normalizedNameFilter) && normalizedCategory.includes(normalizedCategoryFilter) && m.enabled
+  })
 
-  const categories: string[] = [];
+  const categories: string[] = []
   for (let i = 0; i < members.length; i++) {
-    if (members[i].category && !categories.includes(members[i].category as string)) {
-      categories.push(members[i].category as string);
+    const category = members[i].category
+    if (typeof category === 'string' && category.trim() && !categories.includes(category)) {
+      categories.push(category)
     }
   }
-  categories.sort((a,b) => a.localeCompare(b))
+  categories.sort((a, b) => a.localeCompare(b))
 
   return (
     <div className="mx-10 max-w-[900px] lg:mx-auto ">
