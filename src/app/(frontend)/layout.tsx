@@ -8,6 +8,7 @@ import React from 'react'
 import { Footer } from '@/Footer/Component'
 import { Header } from '@/Header/Component'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
+import { generateOrganizationSchema } from '@/utilities/generateSchema'
 
 
 import './globals.css'
@@ -50,6 +51,11 @@ export const metadata: Metadata = {
   openGraph: mergeOpenGraph(),
   twitter: {
     card: 'summary_large_image',
-    creator: '@payloadcms',
+    creator: '@MarinCountyAging',
+    site: '@MarinCountyAging',
+  },
+  robots: 'index, follow',
+  other: {
+    'script:ld+json': JSON.stringify(generateOrganizationSchema()),
   },
 }
