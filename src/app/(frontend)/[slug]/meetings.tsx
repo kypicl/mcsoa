@@ -14,9 +14,25 @@ type Post = {
   content: any
 }
 
+
 export default function Meetings() {
   const [post, setPost ] = useState<Post | null>(null)
   const [extensionVisible, setExtensionVisible] = useState(false)
+  const currentDate = new Date()
+  const currentMonth = currentDate.toLocaleString("en-US", { month: "long" })
+  const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1)
+  const daysUntilThursday = (4 - firstDayOfMonth.getDay() + 7) % 7
+  const thirdThursday = new Date(
+    currentDate.getFullYear(),
+    currentDate.getMonth(),
+    1 + daysUntilThursday + 14,
+  )
+  const thirdThursdayText = thirdThursday.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  })
   const contentText = post?.content?.root?.children?.[0]?.children?.[0]?.text || ""
   const contentTextExtention = post?.content?.root?.children[1]?.children[0]?.text || ""
 
@@ -47,10 +63,10 @@ export default function Meetings() {
 <div className="lg:max-w-280 mx-2.5 gap-5 lg:flex items-center my-10 ">
 
   <div className="mb-5 lg:mb-0 lg:w-1/3 lg:ml-0 mx-2.5 md:w-[400px] bg-[#2F4663] text-white rounded-lg text-center  py-10">
-    <h3 className="text-xl pb-4 font-semibold ">August Meeting</h3>
+    <h3 className="text-xl pb-4 font-semibold ">{currentMonth} Meeting</h3>
     <div className="text-base/7.5 font-bold">
-    <div>Thursday August 20, 2026</div>
-    <div>10am</div>
+    <div>{thirdThursdayText}</div>
+    <div>10am PST</div>
     <div className="py-4">The Redwoods Senior Community <br/>
     40 Camino Alto, Mill Valley  <br/>
   (across from Mt Tam High School)
