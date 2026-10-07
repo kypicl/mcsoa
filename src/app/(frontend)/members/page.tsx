@@ -11,7 +11,7 @@ export default async function Members() {
     const {docs} = await payload.find({
         collection: 'members',
         sort: 'name',
-        limit: 100,
+        limit: 0,
     })
 
     const members = docs.map(({id, name, category, contact_name, description, enabled, link, email, address, phone, logo}) => ({
