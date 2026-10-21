@@ -79,6 +79,9 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   return (
     <>
+      <div className="sticky top-0 z-50 w-full bg-[#ffb703] px-4 py-3 text-center text-sm font-medium text-[#2F4663] md:text-base">
+        Announcement: The MCSOA has a <span className="font-bold">NEW LOCATION</span> for the monthly meeting, now at AlmaVia of San Rafael
+      </div>
   {/* // banner picture */}
 <div className="h-70 md:h-80 bg-white flex items-center justify-center">
     {/* <Image

@@ -67,9 +67,8 @@ export default function Meetings() {
     <div className="text-base/7.5 font-bold">
     <div>{thirdThursdayText}</div>
     <div>10am PST</div>
-    <div className="py-4">The Redwoods Senior Community <br/>
-    40 Camino Alto, Mill Valley  <br/>
-  (across from Mt Tam High School)
+    <div className="py-4">AlmaVia of San Rafael <br/>
+    515 Northgate Drive, San Rafael  <br/>
   </div>
     <div>Any questions please email us: <a href="mailto:info@marinsectiononaging.org">info@marinsectiononaging.org</a></div>
     </div>
