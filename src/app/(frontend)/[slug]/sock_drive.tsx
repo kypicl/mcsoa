@@ -6,8 +6,9 @@ export default async function SockDrive() {
 
   return (
     <section className="mt-5 w-full bg-white px-7.5 pt-5 pb-20">
-      <div className="mx-auto max-w-280">
-        <h2 className="mb-10 text-center text-4xl text-[#2F4663] underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
+      <div className="mx-auto max-w-150">
+        <div className="bg-[#4d704f] rounded-lg p-5 mx-5 mt-5" >
+        <h2 className="mb-10 text-center text-4xl text-white underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
           Annual Sock Drive
         </h2>
         {flyer?.url && (
@@ -28,6 +29,7 @@ export default async function SockDrive() {
             </a>
           </div>
         )}
+        </div>
       </div>
     </section>
   )
