@@ -5,7 +5,7 @@ export default async function SockDrive() {
   const flyer = await fetchMedia({ mediaId: 193 })
 
   return (
-    <section className="mt-5 w-full bg-white px-7.5 pt-5 pb-20">
+    <section className="mt-5 w-full bg-white px-7.5 pt-5 pb-7.5">
       <div className="mx-auto max-w-150">
         <div className="bg-[#4d704f] rounded-lg p-5 mx-5 mt-5" >
         <h2 className="mb-10 text-center text-4xl text-white underline decoration-[#ffb703] decoration-2 underline-offset-[13px]">
