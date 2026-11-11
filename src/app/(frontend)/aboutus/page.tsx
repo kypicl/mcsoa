@@ -8,7 +8,6 @@ export default async function AboutUsPage() {
   const aboutUsLogo = await fetchMedia({ mediaId:11})
   const terriphoto = await fetchMedia({ mediaId:97 })
   const lorenaphoto = await fetchMedia({ mediaId:99 })
-  const williamphoto = await fetchMedia({ mediaId:102 })
   const johnellphoto = await fetchMedia({ mediaId:106 })
   const libbyphoto = await fetchMedia({ mediaId:148 })
   const carlyphoto = await fetchMedia({ mediaId:110 })
@@ -29,7 +28,7 @@ export default async function AboutUsPage() {
       </div>
 
 
-            <div className="max-w-[1200px] w-full mx-auto px-5 mb-10 place-content-center">
+            <div className="max-w-[1200px] w-full mx-auto px-5 mb-40 place-content-center">
         <div className="text-center text-3xl md:text-4xl/15 text-[#2F4663]  mb-7.5 underline decoration-[#ffb703] decoration-2 underline-offset-[15px]">
         Meet the Committee
       </div>
@@ -43,7 +42,7 @@ export default async function AboutUsPage() {
 <div className="md:bg-gray-100 lg:bg-transparent"></div>
 {/* 1. Row of Volunteers */}
 
-      <div className="md:grid md:grid-cols-3 md:gap-5 ">
+      <div className="md:grid md:grid-cols-3 md:gap-5 min-h-[200px]">
             <div className="mb-10 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
       <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
@@ -51,6 +50,8 @@ export default async function AboutUsPage() {
         <Image
         src={terriphoto.url}
         alt={terriphoto.alt || ""}
+        width={180}
+        height={180}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -70,6 +71,8 @@ export default async function AboutUsPage() {
         <Image
         src={lorenaphoto.url}
         alt={lorenaphoto.alt || ""}
+        width={180}
+        height={180}
         className="h-full w-full object-cover rounded-full"
         />
 
@@ -83,32 +86,6 @@ export default async function AboutUsPage() {
           <div className="text-sm break-all px-2.5">(415) 949-8354</div>
           <div className="text-sm break-all px-2.5">LGarbarino@suncrestcare.com</div>
         </div>
-
-            <div className="h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
-       <div className="flex justify-center">
-      <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
-       {williamphoto?.url && (
-        <Image
-        src={williamphoto.url}
-        alt={williamphoto.alt || ""}
-        className="h-full w-full object-cover rounded-full"
-        />
-       )}
-      </div>
-      </div>
-          <div className="text-xl font-bold pt-2.5 text-[#272757]">William Foster</div>
-          <div className="text-md pb-2.5 lg:px-2">Director of Community Relations</div>
-          <div className="text-sm px-2.5">The Redwoods, A Community of Seniors</div>
-          <div className="text-sm break-all px-2.5 underline"><Link href="https://www.theredwoods.org/">theredwoods.org</Link></div>
-          <div className="text-sm break-all px-2.5">wfoster@theredwoods.org</div>
-        </div>
-      </div>
-      </div>
-
-
-{/* 2. Row of Volunteers */}
-       <div className="max-w-[1400px] w-full mx-auto px-5 mb-40 place-content-center">
-      <div className="md:grid md:grid-cols-4 md:gap-5 lg:gap-0 min-h-[200px]">
             <div className="mb-5 md:mb-0 h-full text-center shadow lg:shadow md:shadow-none rounded-lg rounded-lg w-[250px] lg:w-[250px] md:w-[170px] py-5 place-items-center place-self-center">
        <div className="flex justify-center">
       <div className="h-[180px] w-[180px] md:h-[150px] md:w-[150px] lg:h-[180px] lg:w-[180px]">
@@ -116,6 +93,8 @@ export default async function AboutUsPage() {
         <Image
         src={johnellphoto.url}
         alt={johnellphoto.alt || ""}
+        width={180}
+        height={180}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -134,6 +113,8 @@ export default async function AboutUsPage() {
         <Image
         src={libbyphoto.url}
         alt={libbyphoto.alt || ""}
+        width={180}
+        height={180}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -172,6 +153,8 @@ export default async function AboutUsPage() {
         <Image
         src={deohnahphoto.url}
         alt={deohnahphoto.alt || ""}
+        width={180}
+        height={180}
         className="h-full w-full object-cover rounded-full"
         />
        )}
@@ -183,7 +166,7 @@ export default async function AboutUsPage() {
           <div className="text-sm break-all px-2.5">(951) 255-0131</div>
           <div className="text-sm break-all px-2.5">Dsharifi@anchorhpc.com</div>
         </div>
-        </div>
+      </div>
       </div>
     </>
   )
